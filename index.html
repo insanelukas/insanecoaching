@@ -126,6 +126,8 @@ p, figure { margin: 0; }
 .brand b { font: 700 clamp(.85rem, 3.6vw, 1rem)/1.1 var(--sans); letter-spacing: .08em; white-space: nowrap; }
 @media (min-width: 60rem) { .brand b { letter-spacing: .14em; } }
 .brand span { font-size: .78rem; color: var(--iron-mute); }
+.top-link { color: var(--iron-fg); font: 600 .85rem/1 var(--sans); text-decoration: none; white-space: nowrap; padding: .75rem .1rem .6rem; border-bottom: 2px solid var(--mark); }
+.top-link:hover { color: var(--mark); }
 .seg { display: inline-flex; border: 1px solid var(--iron-line); border-radius: 3px; overflow: hidden; }
 .seg button { background: transparent; color: var(--iron-mute); border: 0; padding: .4rem .65rem; font: 600 .8rem/1 var(--sans); cursor: pointer; min-height: 2.25rem; }
 .seg button[aria-pressed="true"] { background: var(--iron-fg); color: var(--iron); }
@@ -657,6 +659,7 @@ body.cc-on .nudge { bottom: calc(var(--cc-h, 9rem) + 12px); }
       <b>INSANE COACHING</b>
       <span>Lukas Smagurauskas</span>
     </a>
+    <a class="top-link" href="challenge/" data-l="lt" hidden>Iššūkis</a>
     <div class="seg" role="group" aria-label="Language / Kalba">
       <button type="button" id="lang-en" data-set-lang="en" aria-pressed="true">EN</button>
       <button type="button" id="lang-lt" data-set-lang="lt" aria-pressed="false">LT</button>
@@ -1312,6 +1315,7 @@ body.cc-on .nudge { bottom: calc(var(--cc-h, 9rem) + 12px); }
         <details><summary><span data-l="en">Will I have to give up food I love?</span><span data-l="lt" hidden>Ar reikės atsisakyti mėgstamo maisto?</span></summary><p class="a"><span data-l="en">No. Your plan is built from food you already eat, in grams. Nothing is banned; we change the amounts.</span><span data-l="lt" hidden>Ne. Planas sudaromas gramais iš maisto, kurį jau valgai. Nieko nedraudžiama, keičiam tik kiekius.</span></p></details>
         <details><summary><span data-l="en">I travel a lot. Will it work?</span><span data-l="lt" hidden>Daug keliauju. Ar tiks?</span></summary><p class="a"><span data-l="en">Yes. You get travel and busy-week versions of your plan: hotel gym, room workout, what to order at a restaurant.</span><span data-l="lt" hidden>Taip. Gauni plano versijas kelionėms ir užimtoms savaitėms: viešbučio salė, treniruotė kambaryje, ką rinktis restorane.</span></p></details>
         <details><summary><span data-l="en">How much time does it take?</span><span data-l="lt" hidden>Kiek laiko tai užims?</span></summary><p class="a"><span data-l="en">We fit the number of sessions to your week. The weekly check-in takes a few minutes: photos, weight and how the week went.</span><span data-l="lt" hidden>Treniruočių skaičių pritaikom prie tavo savaitės. Savaitinis check-in užtrunka kelias minutes: nuotraukos, svoris ir kaip praėjo savaitė.</span></p></details>
+        <details><summary><span data-l="en">Do I need a gym?</span><span data-l="lt" hidden>Ar būtina sporto salė?</span></summary><p class="a"><span data-l="en">No. I build your programme around your goal, for home or for the gym. You can make progress at home too, and I'll tell you what you need for it.</span><span data-l="lt" hidden>Ne. Programą sudarau pagal tavo tikslą: namams arba sporto salei. Progresuoti galima ir namuose, o ko tam reikės, pasakysiu.</span></p></details>
         <details><summary><span data-l="en">I've never trained seriously. Will it work?</span><span data-l="lt" hidden>Niekada rimtai nesportavau. Ar tiks?</span></summary><p class="a"><span data-l="en">Yes. We start at your level and build step by step. One message after three months: “I'd never trained before… Happy with my 3-month result!”</span><span data-l="lt" hidden>Taip. Pradedam nuo tavo lygio ir keliam žingsnis po žingsnio. Viena žinutė po trijų mėnesių: „Prieš tai niekada nesportavau… Džiaugiuosi 3 mėn. rezultatu!“</span></p></details>
         <details><summary><span data-l="en">What happens on the call?</span><span data-l="lt" hidden>Kas vyksta per pokalbį?</span></summary><p class="a"><span data-l="en">We talk about your goal, what stopped you before and whether we're a fit. If we are, I send you the questionnaire.</span><span data-l="lt" hidden>Pakalbam apie tavo tikslą, kas trukdė anksčiau ir ar tinkame vienas kitam. Jei taip, atsiunčiu anketą.</span></p></details>
         <details><summary><span data-l="en">Do you coach women, and people outside Lithuania?</span><span data-l="lt" hidden>Ar dirbi su moterimis ir su žmonėmis ne Lietuvoje?</span></summary><p class="a"><span data-l="en">Yes to both. I coach online in English and Lithuanian, with clients in Lithuania, the UK and the USA.</span><span data-l="lt" hidden>Taip, abiem atvejais. Dirbu internetu lietuviškai ir angliškai; klientų turiu Lietuvoje, Jungtinėje Karalystėje ir JAV.</span></p></details>
@@ -1342,12 +1346,12 @@ body.cc-on .nudge { bottom: calc(var(--cc-h, 9rem) + 12px); }
 
 <footer class="foot">
   <div class="wrap cols">
-    <div><b>UAB „Insane Coaching“</b><span data-l="en">1:1 online coaching</span><span data-l="lt" hidden>Individualus online koučingas</span></div>
+    <div><b>Insane Coaching, UAB</b><span data-l="en">Company code 305858689<br>Vilnius, Lithuania</span><span data-l="lt" hidden>Įmonės kodas 305858689<br>Vilnius, Lietuva</span></div>
     <div><b>Instagram</b><a href="https://www.instagram.com/insane_lukas/" target="_blank" rel="noopener">@insane_lukas</a><br><span data-l="en">In Lithuanian: </span><span data-l="lt" hidden>Lietuviškai: </span><a href="https://www.instagram.com/insane_coaching/" target="_blank" rel="noopener">@insane_coaching</a></div>
     <div><b><span data-l="en">Email</span><span data-l="lt" hidden>El. paštas</span></b><span class="copy">lukas@insanecoaching.com</span></div>
     <div><b><span data-l="en">Supplements</span><span data-l="lt" hidden>Papildai</span></b><a href="https://insanefits.com" target="_blank" rel="noopener">insanefits.com</a></div>
   </div>
-  <div class="wrap"><p class="legal" id="legal" hidden><a href="privatumas/" id="privacy-link"><span data-l="en">Privacy</span><span data-l="lt" hidden>Privatumas</span></a><button type="button" id="cc-open"><span data-l="en">Cookies</span><span data-l="lt" hidden>Slapukai</span></button></p></div>
+  <div class="wrap"><p class="legal" id="legal" hidden><a href="challenge/" data-l="lt" hidden>Iššūkis</a><a href="privatumas/" id="privacy-link"><span data-l="en">Privacy</span><span data-l="lt" hidden>Privatumas</span></a><button type="button" id="cc-open"><span data-l="en">Cookies</span><span data-l="lt" hidden>Slapukai</span></button></p></div>
 </footer>
 
 <div class="stickybar" id="stickybar" aria-hidden="true">
@@ -1612,7 +1616,7 @@ body.cc-on .nudge { bottom: calc(var(--cc-h, 9rem) + 12px); }
   };
   /* Filled in by the production build (finalize.py). Empty here: no tags load, no cookie bar shows and the calendar opens
      in a new tab, because the preview cannot load outside scripts or frames. */
-  var SITE = {"ga4": "G-WPXGFQC5H6", "pixel": "487235582379743", "embed": true, "privacy": "privatumas/", "titles": {"en": "Insane Coaching | 1:1 coaching with IFBB Pro Lukas Smagurauskas", "lt": "Insane Coaching | 1:1 koučingas su IFBB Pro Luku Smagurausku"}, "notes": "code", "base": "https://insanelukas.github.io/insanecoaching/"};
+  var SITE = {"ga4": "G-WPXGFQC5H6", "pixel": "487235582379743", "embed": true, "privacy": "privatumas/", "titles": {"en": "Insane Coaching | 1:1 coaching with IFBB Pro Lukas Smagurauskas", "lt": "Insane Coaching | 1:1 koučingas su IFBB Pro Luku Smagurausku"}, "notes": "code", "ml_waitlist": "https://assets.mailerlite.com/jsonp/292953/forms/204948532910622700/subscribe", "base": "https://insanelukas.github.io/insanecoaching/"};
   /* Where analytics can run, links never carry the answers in their address (Google's click tracking would read them):
      the full Calendly address is kept in a variable and opened by script. */
   var CLEAN = !!(SITE.ga4 || SITE.pixel), calFull = "";
