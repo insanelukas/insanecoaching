@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1C2024">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<title>Klausimyno atsakymai | Insane Coaching</title>
+<style>
+@font-face { font-family: "Instrument Sans"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(../fonts/instrument-sans-latin-ext-wght-normal.woff2) format("woff2"); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Instrument Sans"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(../fonts/instrument-sans-latin-wght-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "Lora"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(../fonts/lora-latin-ext-wght-normal.woff2) format("woff2"); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Lora"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(../fonts/lora-latin-wght-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+[hidden] { display: none !important; }
+body { margin: 0; min-height: 100dvh; display: grid; align-items: center; background: #1C2024; color: #F3F4F0; font: 400 1.0625rem/1.55 "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+main { width: 100%; max-width: 36rem; margin-inline: auto; padding: 3rem max(20px, env(safe-area-inset-right, 0px)) 3rem max(20px, env(safe-area-inset-left, 0px)); display: grid; gap: 1.4rem; }
+.brand { margin: 0; font-weight: 700; letter-spacing: .08em; font-size: .85rem; color: #A9B0B6; }
+.brand a { color: inherit; text-decoration: none; }
+h1 { margin: 0; font: 600 clamp(2rem, 8vw, 2.9rem)/1.08 "Lora", Georgia, serif; text-wrap: balance; }
+h2 { margin: 1.2rem 0 0; font: 600 1.3rem/1.25 "Lora", Georgia, serif; }
+p { margin: 0; }
+.lede { font-size: 1.2rem; color: #F3F4F0; }
+ol { list-style: none; margin: .4rem 0 0; padding: 0; display: grid; gap: 1rem; counter-reset: s; }
+ol li { counter-increment: s; display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); gap: .2rem .6rem; color: #A9B0B6; }
+ol li::before { content: counter(s); grid-row: 1 / span 2; font: 600 1.5rem/1.1 "Lora", Georgia, serif; color: #FFD23F; }
+ol li b { display: block; color: #F3F4F0; font-weight: 600; }
+.by { margin: .6rem 0 0; padding-top: 1.4rem; border-top: 1px solid #343A40; display: flex; gap: .8rem; align-items: center; color: #A9B0B6; font-size: .95rem; line-height: 1.4; }
+.by img { width: 3rem; height: 3rem; border-radius: 50%; flex: none; display: block; }
+.by b { display: block; color: #F3F4F0; font-weight: 600; }
+a { color: #FFD23F; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid #FFD23F; outline-offset: 3px; }
+.back { font-size: .95rem; color: #A9B0B6; }
+.doc { gap: 1.1rem; }
+.doc section { display: grid; gap: .8rem; }
+.doc h2 { margin-top: .8rem; }
+.doc p { color: #C9CED3; }
+.doc .lede { color: #F3F4F0; }
+.doc .small { font-size: .9rem; color: #A9B0B6; }
+.langs { display: flex; gap: .4rem; }
+.langs button { background: none; border: 1px solid #343A40; color: #A9B0B6; font: inherit; font-weight: 600; font-size: .85rem; line-height: 1; padding: .5rem .7rem; border-radius: 3px; cursor: pointer; }
+.langs button[aria-pressed="true"] { background: #F3F4F0; color: #15171A; border-color: #F3F4F0; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 2.75rem; padding: .5rem 1rem; font: inherit; font-weight: 600; font-size: .95rem; line-height: 1.2; border-radius: 3px; border: 2px solid transparent; cursor: pointer; }
+.btn-main { background: #FFD23F; color: #15171A; }
+.btn-ghost { background: transparent; color: #F3F4F0; border-color: #6B737A; }
+.cc { position: fixed; left: 0; right: 0; bottom: 0; background: #FFFFFF; color: #15171A; border-top: 1px solid #DCDFD9; box-shadow: 0 -10px 30px rgba(10, 12, 14, .3); padding: .85rem max(16px, env(safe-area-inset-right, 0px)) calc(.85rem + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.cc-in { max-width: 36rem; margin-inline: auto; display: grid; gap: .7rem; }
+.cc p { font-size: .875rem; line-height: 1.45; color: #5C636A; }
+.cc p b { color: #15171A; font-weight: 600; }
+.cc a { color: inherit; }
+.cc-btns { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+.cc .btn-ghost { color: #15171A; border-color: #15171A; }
+body.cc-on main { padding-bottom: 12rem; }
+
+dl { margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .45rem 1rem; }
+dt { color: #A9B0B6; }
+dd { margin: 0; color: #F3F4F0; font-weight: 600; }
+form { display: flex; gap: .5rem; flex-wrap: wrap; }
+input { flex: 1 1 12rem; min-width: 0; min-height: 2.75rem; padding: .5rem .75rem; font: inherit; color: #15171A; background: #FFFFFF; border: 2px solid #6B737A; border-radius: 3px; }
+.card { display: grid; gap: 1rem; padding: 1.1rem 1.2rem; border: 1px solid #343A40; border-radius: 4px; }
+.card h2 { margin: 0; font-size: 1.05rem; color: #A9B0B6; font-family: inherit; font-weight: 600; }
+code { font: 600 1rem/1 ui-monospace, Menlo, Consolas, monospace; color: #FFD23F; }
+</style>
+</head>
+<body>
+<main class="doc">
+  <p class="brand"><a href="../">INSANE COACHING</a></p>
+  <h1>Klausimyno atsakymai</h1>
+  <p class="lede">Puslapis treneriui: žmogaus atsakymai iš svetainės klausimyno. Kodas ateina kartu su Calendly rezervacija.</p>
+  <div id="out" hidden>
+    <div class="card"><h2>Kodas <code id="code"></code></h2><dl id="lt"></dl></div>
+    <div class="card" lang="en" style="margin-top:1rem"><h2>In English</h2><dl id="en"></dl></div>
+  </div>
+  <p id="bad" hidden>Tokio kodo nėra. Kodas atrodo taip: q111121 (raidė q ir šeši ženklai).</p>
+  <form id="f"><input id="inp" aria-label="Kodas" placeholder="q111121" autocomplete="off" autocapitalize="none" spellcheck="false"><button type="submit" class="btn btn-main">Rodyti</button></form>
+  <p class="small">Kodą rasi Calendly rezervacijoje: laukelyje su atsakymais arba prie „UTM“ kaip utm_content. Atsakymas į klausimą apie veidrodį nesiunčiamas, todėl jo čia nėra.</p>
+</main>
+<script>
+(function () {
+  var ORDER = { sex: ["m", "w"], goal: ["fat", "athletic", "muscle", "hybrid", "stage", "unsure"], why: ["kids", "room", "respect", "self", "health"], tried: ["diets", "alone", "coach", "all", "none"], blocker: ["work", "travel", "family", "motivation", "food"], start: ["week", "month", "looking"] };
+  var KEYS = ["sex", "goal", "why", "tried", "blocker", "start"];
+  var L = {
+    lt: { k: { sex: "Rezultatai", goal: "Tikslas", why: "Kodėl", tried: "Bandė", blocker: "Trukdo", start: "Startas" }, none: "neatsakė", shape: "formos ir jėga",
+      sex: { m: "vyrų", w: "moterų" },
+      goal: { fat: "numesti svorio", athletic: "atletiška forma", muscle: "masė ir jėga", hybrid: "hybrid: bėgimas ir jėga", stage: "scena, varžybos", unsure: "dar nežino" },
+      why: { kids: "dėl vaikų", room: "kad pastebėtų", respect: "pagarba, disciplina", self: "dėl savęs: fit ir stiprus", health: "energija ir sveikata" },
+      tried: { diets: "dietos, svoris grįžo", alone: "sportavo be plano", coach: "treneris ar programėlė: planas ir tyla", all: "visko po truputį", none: "rimtai dar nieko" },
+      blocker: { work: "darbas", travel: "kelionės", family: "šeima", motivation: "dingsta motyvacija", food: "nežino, ką valgyti" },
+      start: { week: "šią savaitę", month: "šį mėnesį", looking: "kol kas domisi" } },
+    en: { k: { sex: "Results shown", goal: "Goal", why: "Why", tried: "Tried", blocker: "In the way", start: "Start" }, none: "no answer", shape: "shape and strength",
+      sex: { m: "men's", w: "women's" },
+      goal: { fat: "lose fat", athletic: "look athletic", muscle: "muscle and strength", hybrid: "hybrid: run and lift", stage: "stage, competition", unsure: "not sure yet" },
+      why: { kids: "for the kids", room: "to be noticed", respect: "respect, discipline", self: "for myself: fit and strong", health: "energy and health" },
+      tried: { diets: "diets, the weight came back", alone: "trained alone, no plan", coach: "coach or app: a plan, then silence", all: "a bit of everything", none: "nothing serious yet" },
+      blocker: { work: "work", travel: "travel", family: "family", motivation: "motivation drops", food: "doesn't know what to eat" },
+      start: { week: "this week", month: "this month", looking: "just looking" } }
+  };
+  function decode(t) {
+    t = String(t || "").trim().replace(/^.*#/, "").toLowerCase();
+    if (!/^q[0-9a-z]{6}$/.test(t)) return null;
+    var o = {}, ok = true;
+    KEYS.forEach(function (k, i) { var n = parseInt(t.charAt(i + 1), 36); if (n > ORDER[k].length) ok = false; o[k] = n ? ORDER[k][n - 1] : ""; });
+    return ok ? o : null;
+  }
+  function fill(id, lang, o) {
+    var dl = document.getElementById(id); dl.innerHTML = "";
+    KEYS.forEach(function (k) {
+      var v = o[k] ? (k === "goal" && o.goal === "muscle" && o.sex === "w" ? L[lang].shape : L[lang][k][o[k]]) : L[lang].none;
+      var dt = document.createElement("dt"), dd = document.createElement("dd");
+      dt.textContent = L[lang].k[k]; dd.textContent = v; dl.appendChild(dt); dl.appendChild(dd);
+    });
+  }
+  function show(t) {
+    var o = decode(t), out = document.getElementById("out"), bad = document.getElementById("bad");
+    out.hidden = !o; bad.hidden = !!o || !String(t || "").trim();
+    if (o) { fill("lt", "lt", o); fill("en", "en", o); document.getElementById("code").textContent = String(t).trim().replace(/^.*#/, "").toLowerCase(); }
+  }
+  var inp = document.getElementById("inp");
+  document.getElementById("f").addEventListener("submit", function (e) { e.preventDefault(); show(inp.value); });
+  window.addEventListener("hashchange", function () { show(location.hash); });
+  if (location.hash.length > 1) show(location.hash);
+})();
+</script>
+</body>
+</html>
