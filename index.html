@@ -1458,7 +1458,7 @@ body.cc-on .nudge { bottom: calc(var(--cc-h, 9rem) + 12px); }
 
     <div class="step" data-step="4" hidden>
       <h3 tabindex="-1"><span data-sex="m"><span data-l="en">How do you feel when you see yourself in the mirror with your shirt off?</span><span data-l="lt" hidden>Kaip jautiesi, kai matai save veidrodyje be marškinėlių?</span></span><span data-sex="w" hidden><span data-l="en">How do you feel when you see yourself in the mirror in a swimsuit?</span><span data-l="lt" hidden>Kaip jautiesi, kai matai save veidrodyje su maudymosi kostiumėliu?</span></span></h3>
-      <p class="q-sub"><span data-l="en">An honest answer tells me where to start. Only I will see it.</span><span data-l="lt" hidden>Atviras atsakymas parodo, nuo ko pradėti. Jį matysiu tik aš.</span></p>
+      <p class="q-sub"><span data-l="en">An honest answer changes what I show you next. It stays on your device.</span><span data-l="lt" hidden>Atviras atsakymas pakeičia, ką parodysiu toliau. Jis lieka tavo įrenginyje.</span></p>
       <div class="opts">
         <button type="button" class="opt" data-q="mirror" data-v="better"><span data-l="en">I could look better</span><span data-l="lt" hidden>Galiu atrodyti geriau</span></button>
         <button type="button" class="opt" data-q="mirror" data-v="dislike"><span data-l="en">I don't like what I see</span><span data-l="lt" hidden>Nepatinka, ką matau</span></button>
@@ -1617,7 +1617,7 @@ body.cc-on .nudge { bottom: calc(var(--cc-h, 9rem) + 12px); }
   };
   /* Filled in by the production build (finalize.py). Empty here: no tags load, no cookie bar shows and the calendar opens
      in a new tab, because the preview cannot load outside scripts or frames. */
-  var SITE = {"ga4": "G-WPXGFQC5H6", "pixel": "487235582379743", "embed": true, "privacy": "privatumas/", "titles": {"en": "Insane Coaching | 1:1 coaching with IFBB Pro Lukas Smagurauskas", "lt": "Insane Coaching | 1:1 koučingas su IFBB Pro Luku Smagurausku"}};
+  var SITE = {"ga4": "G-WPXGFQC5H6", "pixel": "487235582379743", "embed": true, "privacy": "privatumas/", "titles": {"en": "Insane Coaching | 1:1 coaching with IFBB Pro Lukas Smagurauskas", "lt": "Insane Coaching | 1:1 koučingas su IFBB Pro Luku Smagurausku"}, "notes": "code", "base": "https://insanelukas.github.io/insanecoaching/"};
   /* Where analytics can run, links never carry the answers in their address (Google's click tracking would read them):
      the full Calendly address is kept in a variable and opened by script. */
   var CLEAN = !!(SITE.ga4 || SITE.pixel), calFull = "";
@@ -1687,8 +1687,10 @@ body.cc-on .nudge { bottom: calc(var(--cc-h, 9rem) + 12px); }
   function read(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
   function sstore(k, v) { try { sessionStorage.setItem(k, v); } catch (e) {} }
   function sread(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }
-  /* Answers travel to Calendly twice: as a code in utm_content (sex_goal_why_mirror_tried_blocker_start) and as a readable line
-     prefilled into the first text question of the event (a1). */
+  /* Answers travel to Calendly in utm_content and in the first text question of the event (a1). Calendly can pass its page
+     address on to tools connected inside Calendly (a Meta Pixel, Google Analytics), so the real site sends a short code
+     (q + one character per answer) and a link that decodes it for the coach (SITE.notes === "code"); the preview keeps the
+     readable form (sex_goal_why_p_tried_blocker_start and a sentence). The mirror answer never leaves the browser. */
   /* If the visitor came from an ad or a tagged link, its utm_source / medium / campaign travel on to Calendly, so a booking
      can be traced to the ad; the ad's own utm_content moves to utm_term because utm_content carries the answers. */
   var IN = (function () {
@@ -1702,16 +1704,20 @@ body.cc-on .nudge { bottom: calc(var(--cc-h, 9rem) + 12px); }
     if (note) p.set("a1", note);
     return CAL[lang] + "?" + p.toString().replace(/\+/g, "%20");
   }
-  /* priv: the mirror answer never goes to analytics, only a "p" in its place */
-  function content(priv) { return [answers.sex, answers.goal, answers.why, priv ? "p" : answers.mirror, answers.tried, answers.blocker, answers.start].map(function (v) { return v || "x"; }).join("_"); }
+  /* the mirror answer is never sent anywhere: a "p" stands in its place */
+  function content() { return [answers.sex, answers.goal, answers.why, "p", answers.tried, answers.blocker, answers.start].map(function (v) { return v || "x"; }).join("_"); }
+  /* Keep this order in step with the decoder page (make_pages.py): position in the list + 1 is the character, 0 = no answer */
+  var ORDER = { sex: ["m", "w"], goal: ["fat", "athletic", "muscle", "hybrid", "stage", "unsure"], why: ["kids", "room", "respect", "self", "health"], tried: ["diets", "alone", "coach", "all", "none"], blocker: ["work", "travel", "family", "motivation", "food"], start: ["week", "month", "looking"] };
+  function token() { return "q" + ["sex", "goal", "why", "tried", "blocker", "start"].map(function (k) { return (ORDER[k].indexOf(answers[k]) + 1).toString(36); }).join(""); }
+  function calAddr() { return SITE.notes === "code" ? calUrl(token(), LBL[lang].code + " " + SITE.base + "a/#" + token()) : calUrl(content(), summary()); }
   var LBL = {
-    en: { k: ["Goal", "Why", "Tried", "In the way", "Start"], tail: "(from the website quiz)", shape: "shape and strength",
+    en: { k: ["Goal", "Why", "Tried", "In the way", "Start"], tail: "(from the website quiz)", shape: "shape and strength", code: "My answers from the quiz:",
       why: { kids: "for the kids", room: "to be noticed", respect: "respect, discipline", self: "for myself: fit and strong", health: "energy and health" },
       tried: { diets: "diets, the weight came back", alone: "trained alone, no plan", coach: "coach or app: a plan, then silence", all: "a bit of everything", none: "nothing serious yet" },
       goal: { fat: "lose fat", athletic: "look athletic", muscle: "muscle and strength", hybrid: "hybrid: run and lift", stage: "stage, competition", unsure: "not sure yet" },
       blocker: { work: "work", travel: "travel", family: "family", motivation: "motivation drops", food: "doesn't know what to eat" },
       start: { week: "this week", month: "this month", looking: "just looking" } },
-    lt: { k: ["Tikslas", "Kodėl", "Bandė", "Trukdo", "Startas"], tail: "(iš svetainės klausimyno)", shape: "formos ir jėga",
+    lt: { k: ["Tikslas", "Kodėl", "Bandė", "Trukdo", "Startas"], tail: "(iš svetainės klausimyno)", shape: "formos ir jėga", code: "Mano atsakymai iš klausimyno:",
       why: { kids: "dėl vaikų", room: "kad pastebėtų", respect: "pagarba, disciplina", self: "dėl savęs: fit ir stiprus", health: "energija ir sveikata" },
       tried: { diets: "dietos, svoris grįžo", alone: "sportavo be plano", coach: "treneris ar programėlė: planas ir tyla", all: "visko po truputį", none: "rimtai dar nieko" },
       goal: { fat: "numesti svorio", athletic: "atletiška forma", muscle: "masė ir jėga", hybrid: "hybrid: bėgimas ir jėga", stage: "scena, varžybos", unsure: "dar nežino" },
@@ -2009,7 +2015,7 @@ body.cc-on .nudge { bottom: calc(var(--cc-h, 9rem) + 12px); }
 
   document.getElementById("q-next").addEventListener("click", function () { show(6); });
   document.getElementById("cal-link").addEventListener("click", function (e) {
-    track("calendar_click", { content: content(true), source: source });
+    track("calendar_click", { content: content(), source: source });
     if (e.metaKey || e.ctrlKey) return;
     if (SITE.embed && calState !== 3) { e.preventDefault(); openCal(); }
     else if (CLEAN) { e.preventDefault(); calGo(); }
@@ -2044,7 +2050,7 @@ body.cc-on .nudge { bottom: calc(var(--cc-h, 9rem) + 12px); }
     document.getElementById("cal-alt-p").hidden = false; document.getElementById("cal-close").hidden = true;
   }
   function setCalLink() {
-    calFull = calUrl(content(), summary());
+    calFull = calAddr();
     document.getElementById("cal-link").href = document.getElementById("cal-alt").href = document.getElementById("cal-alt-btn").href = CLEAN ? CAL[lang] : calFull;
   }
   function calGo() { var w = null; try { w = window.open(calFull, "_blank"); } catch (e) {} if (w) { try { w.opener = null; } catch (e) {} } else location.href = calFull; }
