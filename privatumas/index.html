@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1C2024">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<title>Privatumas ir slapukai | Insane Coaching</title>
+<script>window.dataLayer = window.dataLayer || [];</script>
+<style>
+@font-face { font-family: "Instrument Sans"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(../fonts/instrument-sans-latin-ext-wght-normal.woff2) format("woff2"); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Instrument Sans"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(../fonts/instrument-sans-latin-wght-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "Lora"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(../fonts/lora-latin-ext-wght-normal.woff2) format("woff2"); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Lora"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(../fonts/lora-latin-wght-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+[hidden] { display: none !important; }
+body { margin: 0; min-height: 100dvh; display: grid; align-items: center; background: #1C2024; color: #F3F4F0; font: 400 1.0625rem/1.55 "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+main { width: 100%; max-width: 36rem; margin-inline: auto; padding: 3rem max(20px, env(safe-area-inset-right, 0px)) 3rem max(20px, env(safe-area-inset-left, 0px)); display: grid; gap: 1.4rem; }
+.brand { margin: 0; font-weight: 700; letter-spacing: .08em; font-size: .85rem; color: #A9B0B6; }
+.brand a { color: inherit; text-decoration: none; }
+h1 { margin: 0; font: 600 clamp(2rem, 8vw, 2.9rem)/1.08 "Lora", Georgia, serif; text-wrap: balance; }
+h2 { margin: 1.2rem 0 0; font: 600 1.3rem/1.25 "Lora", Georgia, serif; }
+p { margin: 0; }
+.lede { font-size: 1.2rem; color: #F3F4F0; }
+ol { list-style: none; margin: .4rem 0 0; padding: 0; display: grid; gap: 1rem; counter-reset: s; }
+ol li { counter-increment: s; display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); gap: .2rem .6rem; color: #A9B0B6; }
+ol li::before { content: counter(s); grid-row: 1 / span 2; font: 600 1.5rem/1.1 "Lora", Georgia, serif; color: #FFD23F; }
+ol li b { display: block; color: #F3F4F0; font-weight: 600; }
+.by { margin: .6rem 0 0; padding-top: 1.4rem; border-top: 1px solid #343A40; display: flex; gap: .8rem; align-items: center; color: #A9B0B6; font-size: .95rem; line-height: 1.4; }
+.by img { width: 3rem; height: 3rem; border-radius: 50%; flex: none; display: block; }
+.by b { display: block; color: #F3F4F0; font-weight: 600; }
+a { color: #FFD23F; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid #FFD23F; outline-offset: 3px; }
+.back { font-size: .95rem; color: #A9B0B6; }
+.doc { gap: 1.1rem; }
+.doc section { display: grid; gap: .8rem; }
+.doc h2 { margin-top: .8rem; }
+.doc p { color: #C9CED3; }
+.doc .lede { color: #F3F4F0; }
+.doc .small { font-size: .9rem; color: #A9B0B6; }
+.langs { display: flex; gap: .4rem; }
+.langs button { background: none; border: 1px solid #343A40; color: #A9B0B6; font: inherit; font-weight: 600; font-size: .85rem; line-height: 1; padding: .5rem .7rem; border-radius: 3px; cursor: pointer; }
+.langs button[aria-pressed="true"] { background: #F3F4F0; color: #15171A; border-color: #F3F4F0; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 2.75rem; padding: .5rem 1rem; font: inherit; font-weight: 600; font-size: .95rem; line-height: 1.2; border-radius: 3px; border: 2px solid transparent; cursor: pointer; }
+.btn-main { background: #FFD23F; color: #15171A; }
+.btn-ghost { background: transparent; color: #F3F4F0; border-color: #6B737A; }
+.cc { position: fixed; left: 0; right: 0; bottom: 0; background: #FFFFFF; color: #15171A; border-top: 1px solid #DCDFD9; box-shadow: 0 -10px 30px rgba(10, 12, 14, .3); padding: .85rem max(16px, env(safe-area-inset-right, 0px)) calc(.85rem + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.cc-in { max-width: 36rem; margin-inline: auto; display: grid; gap: .7rem; }
+.cc p { font-size: .875rem; line-height: 1.45; color: #5C636A; }
+.cc p b { color: #15171A; font-weight: 600; }
+.cc a { color: inherit; }
+.cc-btns { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+.cc .btn-ghost { color: #15171A; border-color: #15171A; }
+body.cc-on main { padding-bottom: 12rem; }
+</style>
+</head>
+<body>
+<main class="doc">
+  <p class="brand"><a href="../">INSANE COACHING</a></p>
+  <div class="langs"><button type="button" data-set="lt" aria-pressed="true">LT</button><button type="button" data-set="en" aria-pressed="false">EN</button></div>
+  <section data-lang="lt">
+    <h1>Privatumas ir slapukai</h1>
+    <p class="lede">Trumpai: kol pats nepasirenki laiko pokalbiui, šis puslapis nežino nei tavo vardo, nei kontaktų. Analitikos ir reklamos slapukai įsijungia tik tau sutikus.</p>
+    <h2>Kas tvarko duomenis</h2>
+    <p>Insane Coaching, UAB. Klausimus ir prašymus siųsk el. paštu <a href="mailto:lukas@insanecoaching.com">lukas@insanecoaching.com</a> (jei nuoroda neatsidaro, nusikopijuok adresą).</p>
+    <h2>Klausimynas</h2>
+    <p>Atsakymai į klausimus (tikslas, kodėl tau tai svarbu, ką jau bandei, kas trukdo, kada nori pradėti) lieka tavo naršyklėje. Paspaudus „Pasirinkti laiką“, jie kartu su rezervacija perduodami į Calendly, kad pokalbiui galėčiau pasiruošti. Atsakymas į klausimą apie veidrodį perduodamas tik sutrumpintu kodu. Į Google ir Meta tavo atsakymai nesiunčiami.</p>
+    <h2>Pokalbio rezervacija</h2>
+    <p>Laiką renkiesi Calendly kalendoriuje ir ten nurodai vardą, el. paštą ir telefoną. Šiuos duomenis naudoju tik pokalbiui suplanuoti ir su tavimi susisiekti. Teisinis pagrindas: tavo prašymu atliekami veiksmai prieš sudarant sutartį (BDAR 6 str. 1 d. b p.). Rezervacijos duomenis saugau tiek, kiek reikia pokalbiui ir tolesniam bendravimui; bet kada gali paprašyti juos ištrinti. <a href="https://calendly.com/legal/privacy-notice" target="_blank" rel="noopener">Calendly privatumo pranešimas</a>.</p>
+    <h2>Slapukai ir analitika</h2>
+    <p>Be tavo sutikimo naudoju tik tai, kas būtina puslapiui veikti: naršyklės atmintyje išsaugomi kalbos ir slapukų pasirinkimai. Jei sutinki, įsijungia Google Analytics 4 (lankomumo statistika) ir Meta Pixel (reklamos rezultatams matuoti ir reklamos auditorijoms sudaryti). Jie gauna puslapio adresą, naršyklės ir įrenginio duomenis, IP adresą ir įvykių pavadinimus, pavyzdžiui, „klausimynas pradėtas“ ar „pokalbis užregistruotas“. Teisinis pagrindas: tavo sutikimas (BDAR 6 str. 1 d. a p.). Google Analytics duomenys saugomi ne ilgiau kaip 14 mėnesių.</p>
+    <p id="cc-state"><span data-cc="all" hidden>Dabar: sutikai su analitikos ir reklamos slapukais.</span><span data-cc="none" hidden>Dabar: pasirinkai tik būtinus.</span><span data-cc="ask" hidden>Dabar: dar nepasirinkai.</span></p>
+    <p><button type="button" class="btn btn-ghost" id="cc-again">Pakeisti slapukų pasirinkimą</button></p>
+    <h2>Kas gauna duomenis</h2>
+    <p>Calendly, LLC (rezervacijos), Google Ireland Limited ir Meta Platforms Ireland Limited (tik tau sutikus) ir svetainės talpinimo paslaugos teikėjas, kurio serveriai, kaip ir visi, fiksuoja techninius įrašus: IP adresą, laiką, naršyklę. Dalis šių įmonių duomenis tvarko ir JAV; tam taikoma ES ir JAV duomenų privatumo sistema arba standartinės sutarčių sąlygos.</p>
+    <h2>Tavo teisės</h2>
+    <p>Gali prašyti susipažinti su savo duomenimis, juos ištaisyti ar ištrinti, apriboti jų tvarkymą, juos perkelti, nesutikti su tvarkymu ir atšaukti sutikimą. Parašyk <a href="mailto:lukas@insanecoaching.com">lukas@insanecoaching.com</a> – atsakysiu per mėnesį. Jei manai, kad tavo duomenys tvarkomi netinkamai, gali kreiptis į <a href="https://vdai.lrv.lt" target="_blank" rel="noopener">Valstybinę duomenų apsaugos inspekciją</a>.</p>
+    <p class="small">Atnaujinta 2026-11-23.</p>
+    <p><a class="back" href="../#lt">Grįžti į puslapį</a></p>
+  </section>
+  <section data-lang="en" hidden>
+    <h1>Privacy and cookies</h1>
+    <p class="lede">In short: until you pick a time for a call, this page knows neither your name nor your contact details. Analytics and advertising cookies switch on only if you agree.</p>
+    <h2>Who handles your data</h2>
+    <p>Insane Coaching, UAB (Lithuania). Send questions and requests to <a href="mailto:lukas@insanecoaching.com">lukas@insanecoaching.com</a> (if the link does not open, copy the address).</p>
+    <h2>The questions</h2>
+    <p>Your answers (goal, why it matters, what you have tried, what gets in the way, when you want to start) stay in your browser. When you press “Choose a time”, they go to Calendly together with your booking, so that I can prepare for the call. The answer to the mirror question travels only as a short code. Your answers are not sent to Google or Meta.</p>
+    <h2>Booking a call</h2>
+    <p>You pick the time in a Calendly calendar and give your name, email and phone there. I use these only to schedule the call and to contact you. Legal basis: steps taken at your request before entering into a contract (GDPR Art. 6(1)(b)). I keep booking data for as long as it is needed for the call and the conversation that follows; you can ask me to delete it at any time. <a href="https://calendly.com/legal/privacy-notice" target="_blank" rel="noopener">Calendly's privacy notice</a>.</p>
+    <h2>Cookies and analytics</h2>
+    <p>Without your consent I use only what the page needs to work: your language and cookie choices are saved in your browser. If you agree, Google Analytics 4 (visitor statistics) and the Meta Pixel (to measure advertising and build advertising audiences) switch on. They receive the page address, browser and device data, your IP address and the names of events such as “quiz started” or “call booked”. Legal basis: your consent (GDPR Art. 6(1)(a)). Google Analytics data is kept for no longer than 14 months.</p>
+    <p><span data-cc="all" hidden>Now: you have agreed to analytics and advertising cookies.</span><span data-cc="none" hidden>Now: you chose only the necessary ones.</span><span data-cc="ask" hidden>Now: you have not chosen yet.</span></p>
+    <p><button type="button" class="btn btn-ghost" data-again>Change my cookie choice</button></p>
+    <h2>Who receives the data</h2>
+    <p>Calendly, LLC (bookings), Google Ireland Limited and Meta Platforms Ireland Limited (only if you agree), and the website's hosting provider, whose servers, like all servers, record technical logs: IP address, time, browser. Some of these companies also process data in the USA, under the EU-U.S. Data Privacy Framework or standard contractual clauses.</p>
+    <h2>Your rights</h2>
+    <p>You can ask to see your data, to correct or delete it, to restrict its use, to receive a copy, to object, and to withdraw consent. Write to <a href="mailto:lukas@insanecoaching.com">lukas@insanecoaching.com</a> and I will answer within a month. If you believe your data is handled incorrectly, you can contact the Lithuanian <a href="https://vdai.lrv.lt" target="_blank" rel="noopener">State Data Protection Inspectorate</a>.</p>
+    <p class="small">Updated 23 November 2026.</p>
+    <p><a class="back" href="../#en">Back to the page</a></p>
+  </section>
+</main>
+<div class="cc" id="cc" role="region" aria-label="Slapukai / Cookies" hidden>
+  <div class="cc-in">
+    <p><span data-lang="lt"><b>Slapukai.</b> Analitikos ir reklamos slapukus (Google, Meta) įjungiu tik tau sutikus.</span><span data-lang="en" hidden><b>Cookies.</b> Analytics and advertising cookies (Google, Meta) switch on only if you agree.</span></p>
+    <div class="cc-btns"><button type="button" class="btn btn-ghost" id="cc-no"><span data-lang="lt">Tik būtini</span><span data-lang="en" hidden>Only necessary</span></button><button type="button" class="btn btn-main" id="cc-yes"><span data-lang="lt">Sutinku</span><span data-lang="en" hidden>Accept</span></button></div>
+  </div>
+</div>
+<script>
+(function () {
+  var secs = document.querySelectorAll("[data-lang]"), btns = document.querySelectorAll("[data-set]");
+  function set(l) {
+    l = l === "en" ? "en" : "lt";
+    document.documentElement.lang = l;
+    secs.forEach(function (s) { s.hidden = s.getAttribute("data-lang") !== l; });
+    btns.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-set") === l)); });
+    document.title = (l === "en" ? "Privacy and cookies" : "Privatumas ir slapukai") + " | Insane Coaching";
+  }
+  var h = (location.hash || "").replace("#", ""), saved = null;
+  try { saved = localStorage.getItem("ic-lang"); } catch (e) {}
+  set(h === "en" || h === "lt" ? h : (saved || ((navigator.language || "").toLowerCase().indexOf("lt") === 0 ? "lt" : "en")));
+  btns.forEach(function (b) { b.addEventListener("click", function () { set(b.getAttribute("data-set")); }); });
+  window.addEventListener("hashchange", function () { var x = location.hash.replace("#", ""); if (x === "en" || x === "lt") set(x); });
+  document.querySelectorAll("[data-again]").forEach(function (b) { b.addEventListener("click", function () { document.getElementById("cc-again").click(); }); });
+})();
+(function () {
+  var GA4 = "G-WPXGFQC5H6", PIXEL = "487235582379743", LANG = "lt", BOOKED = false;
+  var on = false, dup = false, cc = document.getElementById("cc");
+  function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  if (BOOKED) { dup = Date.now() - Number(get("ic-booked") || 0) < 6e5; }
+  function add(src) { var el = document.createElement("script"); el.async = true; el.src = src; document.head.appendChild(el); }
+  function load() {
+    if (on || !(GA4 || PIXEL)) return;
+    on = true;
+    var count = BOOKED && !dup;
+    if (count) set("ic-booked", String(Date.now()));
+    var yes = { ad_storage: "granted", ad_user_data: "granted", ad_personalization: "granted", analytics_storage: "granted" };
+    if (GA4) {
+      if (!window.gtag) {
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        window.gtag("consent", "default", yes); window.gtag("js", new Date()); window.gtag("config", GA4);
+        add("https://www.googletagmanager.com/gtag/js?id=" + GA4);
+      } else window.gtag("consent", "update", yes);
+      if (count) window.gtag("event", "call_booked", { lang: LANG, source: "thank-you" });
+    }
+    if (PIXEL) {
+      if (!window.fbq) {
+        var f = window.fbq = function () { if (f.callMethod) f.callMethod.apply(f, arguments); else f.queue.push(arguments); };
+        if (!window._fbq) window._fbq = f;
+        f.push = f; f.loaded = true; f.version = "2.0"; f.queue = [];
+        add("https://connect.facebook.net/en_US/fbevents.js");
+        f("set", "autoConfig", false, PIXEL); f("init", PIXEL); f("track", "PageView");
+      } else window.fbq("consent", "grant");
+      if (count) window.fbq("track", "Schedule");
+    }
+    dup = true;
+  }
+  function show(v) { if (!cc) return; cc.hidden = !v; document.body.classList.toggle("cc-on", v); }
+  function choose(v) {
+    set("ic-consent", v); show(false);
+    if (v === "all") load();
+    else if (on) {
+      on = false;
+      try {
+        if (window.gtag) window.gtag("consent", "update", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: "denied" });
+        if (window.fbq) window.fbq("consent", "revoke");
+      } catch (e) {}
+    }
+    var st = document.getElementById("cc-state"); if (st) state();
+  }
+  function state() {
+    var c = get("ic-consent");
+    document.querySelectorAll("[data-cc]").forEach(function (el) { el.hidden = el.getAttribute("data-cc") !== (c === "all" ? "all" : c === "none" ? "none" : "ask"); });
+  }
+  if (GA4 || PIXEL) {
+    document.getElementById("cc-yes").addEventListener("click", function () { choose("all"); });
+    document.getElementById("cc-no").addEventListener("click", function () { choose("none"); });
+    var again = document.getElementById("cc-again"); if (again) again.addEventListener("click", function () { show(true); document.getElementById("cc-no").focus(); });
+    var c = get("ic-consent");
+    if (c === "all") load(); else if (c !== "none") show(true);
+  }
+  if (document.getElementById("cc-state")) state();
+})();
+</script>
+</body>
+</html>
