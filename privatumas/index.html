@@ -125,7 +125,9 @@ body.cc-on main { padding-bottom: 12rem; }
   }
   var h = (location.hash || "").replace("#", ""), saved = null;
   try { saved = localStorage.getItem("ic-lang"); } catch (e) {}
-  set(h === "en" || h === "lt" ? h : (saved || ((navigator.language || "").toLowerCase().indexOf("lt") === 0 ? "lt" : "en")));
+  var inLT = false;
+  try { inLT = (Intl.DateTimeFormat().resolvedOptions().timeZone || "") === "Europe/Vilnius"; } catch (e) { inLT = (navigator.language || "").toLowerCase().indexOf("lt") === 0; }
+  set(h === "en" || h === "lt" ? h : (saved === "en" || saved === "lt" ? saved : (inLT ? "lt" : "en")));
   btns.forEach(function (b) { b.addEventListener("click", function () { set(b.getAttribute("data-set")); }); });
   window.addEventListener("hashchange", function () { var x = location.hash.replace("#", ""); if (x === "en" || x === "lt") set(x); });
   document.querySelectorAll("[data-again]").forEach(function (b) { b.addEventListener("click", function () { document.getElementById("cc-again").click(); }); });
