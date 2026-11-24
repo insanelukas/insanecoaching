@@ -1,0 +1,64 @@
+{
+ "requests": [
+  {
+   "index": 1024,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "prompt": "Stylized photoreal AAA open-world video game character, next-gen console in-engine cinematic render, crisp detail, slightly heightened contrast and saturation, warm golden-hour light with teal shadows, subtle film grain. A 26-year-old woman with a fitness competitor physique, lean, toned and athletic, sleek dark-blond hair pulled back, deep tan, wearing a sparkling two-piece fitness competition suit and clear high heels. Full body visible from head to toe, centered in the frame with a little headroom, standing in a relaxed, confident front pose on a fitness competition stage under warm spotlights, a dark audience hall behind and light haze in the air. Straight-on full-body shot. Tasteful athletic styling. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 1025,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "prompt": "Stylized photoreal AAA open-world video game character, next-gen console in-engine cinematic render, crisp detail, slightly heightened contrast and saturation, warm golden-hour light with teal shadows, subtle film grain. A 52-year-old woman with a slim, lean and fit build with a flat stomach and light muscle tone, dark-brown, lightly silver-streaked hair in a ponytail, fine lines on her face and a healthy glow, wearing a sports top, high-waisted running shorts and running shoes. Full body visible from head to toe, centered in the frame with a little headroom, skipping rope mid-jump with the rope arcing overhead, on a seaside promenade at sunset with palm trees and a calm sea behind. Straight-on full-body shot. Tasteful athletic styling. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 1026,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "prompt": "Stylized photoreal AAA open-world video game character, next-gen console in-engine cinematic render, crisp detail, slightly heightened contrast and saturation, warm golden-hour light with teal shadows, subtle film grain. A 52-year-old woman with a athletic toned build with defined shoulders, arms and legs, auburn, lightly silver-streaked hair in a braid, fine lines on her face and a healthy glow, wearing a sports top, training shorts and training shoes. Full body visible from head to toe, centered in the frame with a little headroom, hanging from an outdoor pull-up bar with arms fully extended and feet off the ground, at a beach workout park at sunset with palm trees and the sea behind. Straight-on full-body shot. Tasteful athletic styling. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 1027,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "prompt": "Stylized photoreal AAA open-world video game character, next-gen console in-engine cinematic render, crisp detail, slightly heightened contrast and saturation, warm golden-hour light with teal shadows, subtle film grain. A 52-year-old woman with a strong, firm athletic build with shapely legs and toned arms, long dark, lightly silver-streaked hair in a high ponytail, fine lines on her face and a healthy glow, wearing a sports top, high-waisted training leggings and lifting shoes. Full body visible from head to toe, centered in the frame with a little headroom, standing tall with a loaded barbell across her upper back in front of a squat rack in a gritty industrial warehouse gym with warm sunset light through tall windows. Straight-on full-body shot. Tasteful athletic styling. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 1028,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "prompt": "Stylized photoreal AAA open-world video game character, next-gen console in-engine cinematic render, crisp detail, slightly heightened contrast and saturation, warm golden-hour light with teal shadows, subtle film grain. A 52-year-old woman with a hybrid athlete build, strong and lean, with powerful legs and shoulders, blond, lightly silver-streaked hair in a high ponytail, fine lines on her face and a healthy glow, wearing a black weighted vest over a sports top, high-waisted training leggings and trail running shoes. Full body visible from head to toe, centered in the frame with a little headroom, standing in an athletic ready stance beside a wooden plyo box on a rooftop training area at sunset, a city skyline and palm trees behind. Straight-on full-body shot. Tasteful athletic styling. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 1029,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "prompt": "Stylized photoreal AAA open-world video game character, next-gen console in-engine cinematic render, crisp detail, slightly heightened contrast and saturation, warm golden-hour light with teal shadows, subtle film grain. A 52-year-old woman with a fitness competitor physique, lean, toned and athletic, sleek dark-blond, lightly silver-streaked hair pulled back, deep tan, fine lines on her face and a healthy glow, wearing a sparkling two-piece fitness competition suit and clear high heels. Full body visible from head to toe, centered in the frame with a little headroom, standing in a relaxed, confident front pose on a fitness competition stage under warm spotlights, a dark audience hall behind and light haze in the air. Straight-on full-body shot. Tasteful athletic styling. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  }
+ ]
+}

@@ -1,3 +1,100 @@
 {
- "requests": []
+ "requests": [
+  {
+   "index": 2050,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "7fdeff21-2a7c-4f25-9ea1-f05979923505"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same slim), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a fitted t-shirt and leggings. Scene: A green city park at golden hour. She runs across the grass holding a kite string, with her two children, a boy about 8 and a girl about 6 in casual clothes, running beside her and laughing; the children are seen from the side or from behind; a colourful kite flies above. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2051,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "7fdeff21-2a7c-4f25-9ea1-f05979923505"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same slim), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing an elegant fitted knee-length dress. Scene: A rooftop evening party at sunset with string lights and a city view. She walks in with an easy, confident smile while guests holding drinks turn their heads toward her. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2052,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "7fdeff21-2a7c-4f25-9ea1-f05979923505"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same slim), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a running top and running shorts. Scene: The finish line of a city road race at sunset under a plain arch without any lettering. She has just crossed the line and a friend gives her a high-five while spectators behind the barriers clap. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2053,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "7fdeff21-2a7c-4f25-9ea1-f05979923505"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same slim), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing well-fitting jeans and a fitted top. Scene: A bright bedroom in morning light with a tall standing mirror. She stands in front of the mirror tightening her belt one notch and smiles at her reflection. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2054,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "7fdeff21-2a7c-4f25-9ea1-f05979923505"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same slim), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a light running jacket and running tights. Scene: A tree-lined park path at sunrise. She jogs at an easy pace with a happy golden retriever running beside her. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2055,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "ed8ab077-1d5a-4624-a957-994df336b905"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same athletic toned build), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a fitted t-shirt and shorts. Scene: A backyard lawn at sunset with a small football goal. She plays football with her two children, a boy about 8 and a girl about 6 in casual clothes, dribbling the ball past them as they chase her; the children are seen from the side or from behind. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  }
+ ]
 }

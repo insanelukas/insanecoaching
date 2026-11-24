@@ -1,3 +1,84 @@
 {
- "requests": []
+ "requests": [
+  {
+   "index": 2010,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "5e2163ec-8ffc-475d-8b7c-bc6e7e5967e8"
+     }
+    ],
+    "prompt": "Same man as in the reference image (same face, same hair, same big muscular strength build), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. He is wearing a fitted t-shirt and shorts. Scene: A beach boardwalk at sunset. He walks toward the camera carrying his daughter, about 6, on his shoulders and holding the hand of his son, about 8; both children are laughing. Medium-wide shot, his whole body visible, he is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2011,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "5e2163ec-8ffc-475d-8b7c-bc6e7e5967e8"
+     }
+    ],
+    "prompt": "Same man as in the reference image (same face, same hair, same big muscular strength build), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. He is wearing a fitted white dress shirt with the sleeves rolled up and dark trousers. Scene: A modern glass-walled meeting room high above a coastal city. Seen from behind, he walks toward the head of the table, his broad shoulders, thick forearms and V-shaped back clearly visible, while four seated colleagues in business clothes turn their heads to look at him. Medium-wide shot, his whole body visible, he is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2012,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "5e2163ec-8ffc-475d-8b7c-bc6e7e5967e8"
+     }
+    ],
+    "prompt": "Same man as in the reference image (same face, same hair, same big muscular strength build), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. He is wearing a fitted grey t-shirt and black training shorts. Scene: A gritty industrial warehouse gym. He stands tall at the top of a heavy barbell deadlift while three gym members behind him watch and clap. Medium-wide shot, his whole body visible, he is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2013,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "5e2163ec-8ffc-475d-8b7c-bc6e7e5967e8"
+     }
+    ],
+    "prompt": "Same man as in the reference image (same face, same hair, same big muscular strength build), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. He is wearing jeans and a fitted t-shirt whose sleeves hug his arms. Scene: A stylish clothing shop fitting area with a large mirror and warm light. He looks at his reflection, adjusts the fit and smiles with quiet pride. Medium-wide shot, his whole body visible, he is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2014,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "5e2163ec-8ffc-475d-8b7c-bc6e7e5967e8"
+     }
+    ],
+    "prompt": "Same man as in the reference image (same face, same hair, same big muscular strength build), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. He is wearing a fitted t-shirt, hiking shorts, a backpack and trail shoes. Scene: A hill trail above a coastal city at sunrise. He hikes uphill at a strong pace, breathing easily. Medium-wide shot, his whole body visible, he is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  }
+ ]
 }

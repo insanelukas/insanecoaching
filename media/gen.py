@@ -227,11 +227,22 @@ def main():
         json.dump(dict(g=G, s=S), open(os.path.join(HERE, "plan", "keys.json"), "w"), indent=0)
         rep = {}
         for kind, base, n in (("g_still", 1000, len(G)), ("s_still", 2000, len(S)), ("g_video", 3000, len(G)), ("s_video", 4000, len(S))):
-            for b in range(0, n, 12):
-                rep[f"{kind}_{b // 12:02d}"] = write(f"{kind}_{b // 12:02d}", range(base + b, base + min(b + 12, n)), J)
+            for b in range(0, n, 8):
+                rep[f"{kind}_{b // 8:02d}"] = write(f"{kind}_{b // 8:02d}", range(base + b, base + min(b + 8, n)), J)
         print(json.dumps(rep))
     elif cmd == "batch":
         print(write(sys.argv[2], [int(x) for x in sys.argv[3:]], J))
+    elif cmd == "todo":
+        # python3 gen.py todo KIND [SIZE]: batches for every index of that kind without a job id yet -> plan/todo_KIND_NN.json
+        kind = sys.argv[2]; size = int(sys.argv[3]) if len(sys.argv) > 3 else 8
+        base, n = dict(g_still=(1000, len(G)), s_still=(2000, len(S)), g_video=(3000, len(G)), s_video=(4000, len(S)))[kind]
+        todo = [i for i in range(base, base + n) if i not in J and request(i, J)]
+        for f in os.listdir(os.path.join(HERE, "plan")):
+            if f.startswith(f"todo_{kind}_"): os.remove(os.path.join(HERE, "plan", f))
+        out = []
+        for b in range(0, len(todo), size):
+            write(f"todo_{kind}_{b // size:02d}", todo[b:b + size], J); out.append(todo[b:b + size])
+        print(json.dumps(out))
     elif cmd == "show":
         for x in sys.argv[2:]:
             r = request(int(x), J); print(x, json.dumps(r, ensure_ascii=False)[:1500] if r else "missing reference")

@@ -1,3 +1,119 @@
 {
- "requests": []
+ "requests": [
+  {
+   "index": 3000,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "0bb2e9cc-576b-4e12-a6eb-b338e472986c"
+     },
+     {
+      "role": "end_image",
+      "value": "0bb2e9cc-576b-4e12-a6eb-b338e472986c"
+     }
+    ],
+    "prompt": "He skips rope at a quick steady rhythm, light on his feet, the rope whipping around; shoulders relaxed, breathing easy. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3002,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "5e2163ec-8ffc-475d-8b7c-bc6e7e5967e8"
+     },
+     {
+      "role": "end_image",
+      "value": "5e2163ec-8ffc-475d-8b7c-bc6e7e5967e8"
+     }
+    ],
+    "prompt": "He curls both dumbbells up to his shoulders with controlled power, squeezes his biceps at the top, then lowers them slowly back to his sides and returns to the exact starting stance. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3004,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "60868beb-d40f-4e10-8da9-5fc0dcdafe45"
+     },
+     {
+      "role": "end_image",
+      "value": "60868beb-d40f-4e10-8da9-5fc0dcdafe45"
+     }
+    ],
+    "prompt": "He raises both arms into a front double-biceps pose, holds it flexed for a moment, then relaxes back to the exact starting pose while the spotlights shimmer. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3005,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "bd4da84c-f4b1-4bc1-b2ed-d63bdec5e8f9"
+     },
+     {
+      "role": "end_image",
+      "value": "bd4da84c-f4b1-4bc1-b2ed-d63bdec5e8f9"
+     }
+    ],
+    "prompt": "He skips rope at a quick steady rhythm, light on his feet, the rope whipping around; shoulders relaxed, breathing easy. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3007,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "3b6e1325-7c0d-4141-8ca6-8218afbad6ff"
+     },
+     {
+      "role": "end_image",
+      "value": "3b6e1325-7c0d-4141-8ca6-8218afbad6ff"
+     }
+    ],
+    "prompt": "He curls both dumbbells up to his shoulders with controlled power, squeezes his biceps at the top, then lowers them slowly back to his sides and returns to the exact starting stance. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  }
+ ]
 }
