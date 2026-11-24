@@ -195,9 +195,10 @@ def s_still(key):
             f"{p['He']} is wearing {d[sex]}. Scene: {scene} Medium-wide shot, {p['his']} whole body visible, {p['he']} is the clear focus of the image. {NEG}")
 def s_video(key):
     sa, goal, why = key.split("-"); sex = sa[0]; p = PR[sex]; d = SCX.get(key) or SC[goal][why]
-    # the opening sentence was added on 2026-11-24 for the last clips: some clips opened on a tighter framing than their still, one with the head out of frame
-    return (pick(d, "move", sex).format(**p) + f" The clip opens on the same framing as the image, with {p['his']} head and face in view from the very first frame. "
-            f"{p['His']} face, hair, body and clothing stay consistent with the image. "
+    # the first sentence was added on 2026-11-24 for the last clips: some clips opened on a tighter framing than their still, two with the
+    # head out of frame (said in the middle of the prompt it did not help, so it now comes first)
+    return (f"The video starts exactly on the given image: the same eye-level wide framing, with {p['his']} whole body, head and face in view from the very first frame. "
+            + pick(d, "move", sex).format(**p) + f" {p['His']} face, hair, body and clothing stay consistent with the image. "
             "Smooth natural motion, gentle camera movement, no cuts, no new objects, no text.")
 
 DROPPED = set()   # indexes whose last line in ids.txt forgets the job (filled by load)
