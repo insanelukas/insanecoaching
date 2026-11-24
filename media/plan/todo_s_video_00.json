@@ -1,0 +1,80 @@
+{
+ "requests": [
+  {
+   "index": 4009,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "b739dffd-9174-4ded-b2f6-ba4c946e61cd"
+     }
+    ],
+    "prompt": "He rides the road bike along the coast at a strong steady pace, legs spinning smoothly; the camera tracks beside him. His face, hair, body and clothing stay consistent with the image. Smooth natural motion, gentle camera movement, no cuts, no new objects, no text."
+   }
+  },
+  {
+   "index": 4010,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "8631290e-f1e2-4c64-8e0d-3d9f7da9a135"
+     }
+    ],
+    "prompt": "He walks toward the camera with the child riding up high, bouncing playfully; the other child skips alongside, laughing. His face, hair, body and clothing stay consistent with the image. Smooth natural motion, gentle camera movement, no cuts, no new objects, no text."
+   }
+  },
+  {
+   "index": 4011,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "9796aa9b-2403-4b9c-99f2-ac7ddb9231bb"
+     }
+    ],
+    "prompt": "He walks toward the head of the table and places his hands on it; the seated colleagues turn their heads to look at him. His face, hair, body and clothing stay consistent with the image. Smooth natural motion, gentle camera movement, no cuts, no new objects, no text."
+   }
+  },
+  {
+   "index": 4012,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "5f666ed3-3e27-415e-b0d6-f06e78a4e126"
+     }
+    ],
+    "prompt": "He holds the heavy barbell at a strong lockout, lowers it under control and stands tall; the gym members behind him clap. His face, hair, body and clothing stay consistent with the image. Smooth natural motion, gentle camera movement, no cuts, no new objects, no text."
+   }
+  }
+ ]
+}

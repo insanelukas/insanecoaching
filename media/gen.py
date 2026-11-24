@@ -257,7 +257,8 @@ def main():
         # python3 gen.py todo KIND [SIZE]: batches for every index of that kind without a job id yet -> plan/todo_KIND_NN.json
         kind = sys.argv[2]; size = int(sys.argv[3]) if len(sys.argv) > 3 else 8
         base, n = dict(g_still=(1000, len(G)), s_still=(2000, len(S)), g_video=(3000, len(G)), s_video=(4000, len(S)))[kind]
-        todo = [i for i in range(base, base + n) if i not in J and request(i, J)]
+        JJ, SS, AA = load()
+        todo = [i for i in range(base, base + n) if i not in J and request(i, J) and (kind != "s_video" or ((i - 2000) in AA and (i - 2000) in SS)) and (kind != "g_video" or (i - 2000) in SS)]
         for f in os.listdir(os.path.join(HERE, "plan")):
             if f.startswith(f"todo_{kind}_"): os.remove(os.path.join(HERE, "plan", f))
         out = []
