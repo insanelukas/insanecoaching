@@ -1,0 +1,14 @@
+{
+ "requests": [
+  {
+   "index": 1001,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "prompt": "Stylized photoreal AAA open-world video game character, next-gen console in-engine cinematic render, crisp detail, slightly heightened contrast and saturation, warm golden-hour light with teal shadows, subtle film grain. A 38-year-old man with a athletic V-shaped build with clear muscle definition, short dark-brown hair with a slightly receding hairline, clean-shaven, an ordinary friendly everyday face with a broad nose, an original fictional person, wearing black training shorts and training shoes, shirtless. Full body visible from head to toe, centered in the frame with a little headroom, hanging from an outdoor pull-up bar with arms fully extended and feet off the ground, at a beach workout park at sunset with palm trees and the sea behind. Straight-on full-body shot. Tasteful athletic styling. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  }
+ ]
+}

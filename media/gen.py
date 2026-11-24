@@ -162,7 +162,7 @@ def hair(sex, goal, age):
         look += ", a few lines on his face" if sex == "m" else ", fine lines on her face and a healthy glow"
     return look
 # looks replaced after the video model refused the first still (a likeness check); key -> look
-LOOKX = {"mb-athletic": "short sandy-brown textured hair, a short trimmed beard, an original fictional face that does not resemble any real person"}
+LOOKX = {"mb-athletic": "short dark-brown hair with a slightly receding hairline, clean-shaven, an ordinary friendly everyday face with a broad nose, an original fictional person"}
 def person(sex, age, goal):
     look = LOOKX.get(f"{sex}{age}-{goal}") or hair(sex, goal, age)
     return f"A {YEARS[age]}-year-old {PR[sex]['n']} with a {BUILD[sex][goal]}, {look}"
@@ -271,7 +271,7 @@ def main():
         J, S, A = load()
         cv = [i for i in range(3000, 3000 + len(G)) if i not in J and (i - 2000) in S]
         cv += [i for i in range(4000, 4000 + len(S_)) if i not in J and (i - 2000) in A and (i - 2000) in S]
-        ci = [i for i in range(2000, 2000 + len(S_)) if i not in J]
+        ci = [i for i in range(2000, 2000 + len(S_)) if i not in J and request(i, J)]
         tv = cv[:n]; ti = ci[:max(0, n - len(tv))]
         write("next_vid", tv, J); write("next_img", ti, J)
         print(json.dumps(dict(vid=tv, img=ti, left=dict(vid=len(cv) - len(tv), img=len(ci) - len(ti)))))
