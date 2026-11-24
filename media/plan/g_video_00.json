@@ -24,6 +24,29 @@
    }
   },
   {
+   "index": 3001,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "a2ee04fe-f2ae-4409-8364-16e255caed93"
+     },
+     {
+      "role": "end_image",
+      "value": "a2ee04fe-f2ae-4409-8364-16e255caed93"
+     }
+    ],
+    "prompt": "He does two smooth strict pull-ups, chin over the bar each time, lowers under control and returns to the exact dead hang. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
    "index": 3002,
    "params": {
     "model": "seedance_2_5",
@@ -44,6 +67,29 @@
      }
     ],
     "prompt": "He curls both dumbbells up to his shoulders with controlled power, squeezes his biceps at the top, then lowers them slowly back to his sides and returns to the exact starting stance. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3003,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "2f29276e-7a9e-49ba-8ba1-d7fe54331980"
+     },
+     {
+      "role": "end_image",
+      "value": "2f29276e-7a9e-49ba-8ba1-d7fe54331980"
+     }
+    ],
+    "prompt": "He bursts into a fast high-knees sprint on the spot for a few seconds, arms pumping hard, the weighted vest bouncing slightly, then slows down and settles back into the exact starting stance. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
    }
   },
   {
@@ -90,6 +136,29 @@
      }
     ],
     "prompt": "He skips rope at a quick steady rhythm, light on his feet, the rope whipping around; shoulders relaxed, breathing easy. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3006,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "a3e4e3c3-3316-4d03-b971-04fbba27095e"
+     },
+     {
+      "role": "end_image",
+      "value": "a3e4e3c3-3316-4d03-b971-04fbba27095e"
+     }
+    ],
+    "prompt": "He does two smooth strict pull-ups, chin over the bar each time, lowers under control and returns to the exact dead hang. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
    }
   },
   {

@@ -1,0 +1,132 @@
+{
+ "requests": [
+  {
+   "index": 2024,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "60868beb-d40f-4e10-8da9-5fc0dcdafe45"
+     }
+    ],
+    "prompt": "Same man as in the reference image (same face, same hair, same competition bodybuilder physique), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. He is wearing a fitted t-shirt and joggers. Scene: A bright modern kitchen in the morning. He plates a colourful healthy meal of chicken, rice and vegetables at the counter, looking energetic. Medium-wide shot, his whole body visible, he is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2025,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "bd4da84c-f4b1-4bc1-b2ed-d63bdec5e8f9"
+     }
+    ],
+    "prompt": "Same man as in the reference image (same face, same hair, same slim), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. He is wearing a fitted t-shirt and shorts. Scene: A green city park at golden hour. He runs across the grass holding a kite string, with his two children, a boy about 8 and a girl about 6 in casual clothes, running beside him and laughing; the children are seen from the side or from behind; a colourful kite flies above. Medium-wide shot, his whole body visible, he is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2026,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "bd4da84c-f4b1-4bc1-b2ed-d63bdec5e8f9"
+     }
+    ],
+    "prompt": "Same man as in the reference image (same face, same hair, same slim), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. He is wearing a slim-fit navy suit with an open-collar white shirt. Scene: A rooftop evening party at sunset with string lights and a city view. He walks in with an easy, confident smile while guests holding drinks turn their heads toward him. Medium-wide shot, his whole body visible, he is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2027,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "bd4da84c-f4b1-4bc1-b2ed-d63bdec5e8f9"
+     }
+    ],
+    "prompt": "Same man as in the reference image (same face, same hair, same slim), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. He is wearing a sleeveless running top and running shorts. Scene: The finish line of a city road race at sunset under a plain arch without any lettering. He has just crossed the line and a friend gives him a high-five while spectators behind the barriers clap. Medium-wide shot, his whole body visible, he is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2028,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "bd4da84c-f4b1-4bc1-b2ed-d63bdec5e8f9"
+     }
+    ],
+    "prompt": "Same man as in the reference image (same face, same hair, same slim), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. He is wearing well-fitting jeans and a fitted t-shirt. Scene: A bright bedroom in morning light with a tall standing mirror. He stands in front of the mirror tightening his belt one notch and smiles at his reflection. Medium-wide shot, his whole body visible, he is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2029,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "bd4da84c-f4b1-4bc1-b2ed-d63bdec5e8f9"
+     }
+    ],
+    "prompt": "Same man as in the reference image (same face, same hair, same slim), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. He is wearing a light running jacket and running shorts. Scene: A tree-lined park path at sunrise. He jogs at an easy pace with a happy golden retriever running beside him. Medium-wide shot, his whole body visible, he is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2030,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "a3e4e3c3-3316-4d03-b971-04fbba27095e"
+     }
+    ],
+    "prompt": "Same man as in the reference image (same face, same hair, same athletic V-shaped build), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. He is wearing a fitted t-shirt and shorts. Scene: A backyard lawn at sunset with a small football goal. He plays football with his two children, a boy about 8 and a girl about 6 in casual clothes, dribbling the ball past them as they chase him; the children are seen from the side or from behind. Medium-wide shot, his whole body visible, he is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2031,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "a3e4e3c3-3316-4d03-b971-04fbba27095e"
+     }
+    ],
+    "prompt": "Same man as in the reference image (same face, same hair, same athletic V-shaped build), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. He is wearing a fitted light-blue dress shirt with the sleeves rolled up and tailored trousers. Scene: A bright modern open-plan office with large windows. He walks through the office with confident posture while colleagues at their desks look up at him. Medium-wide shot, his whole body visible, he is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  }
+ ]
+}

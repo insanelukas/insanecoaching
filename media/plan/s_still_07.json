@@ -63,6 +63,70 @@
     ],
     "prompt": "Same woman as in the reference image (same face, same hair, same athletic toned build), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a cycling jersey, cycling shorts and a helmet. Scene: A coastal bike path at sunrise beside the sea. She rides a road bike at a strong, steady pace. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
    }
+  },
+  {
+   "index": 2060,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "dfdc40a5-fe0e-4237-87b9-eb935fb91ae9"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same strong), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a fitted t-shirt and denim shorts. Scene: A beach boardwalk at sunset. She walks toward the camera giving her son, about 6, a piggyback ride while her daughter, about 8, skips beside her holding her hand; both children are laughing. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2061,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "dfdc40a5-fe0e-4237-87b9-eb935fb91ae9"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same strong), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a fitted sleeveless top and tailored trousers. Scene: A modern glass-walled meeting room high above a coastal city. She walks toward the head of the table with strong posture, her toned arms and shoulders visible, while four seated colleagues in business clothes turn their heads to look at her. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2062,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "dfdc40a5-fe0e-4237-87b9-eb935fb91ae9"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same strong), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a sports top and high-waisted leggings. Scene: A gritty industrial warehouse gym. She stands tall at the top of a heavy barbell deadlift while three gym members behind her watch and clap. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2063,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "dfdc40a5-fe0e-4237-87b9-eb935fb91ae9"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same strong), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a fitted dress. Scene: A stylish clothing shop fitting area with a large mirror and warm light. She looks at her reflection, adjusts the fit and smiles with quiet pride. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
   }
  ]
 }

@@ -61,7 +61,7 @@ MOVE = {
  "athletic": "{He} does two smooth strict pull-ups, chin over the bar each time, lowers under control and returns to the exact dead hang.",
  "muscle_m": "He curls both dumbbells up to his shoulders with controlled power, squeezes his biceps at the top, then lowers them slowly back to his sides and returns to the exact starting stance.",
  "muscle_w": "She squats down under control until her thighs are parallel to the floor and drives back up to standing, twice, the barbell steady across her upper back, and returns to the exact starting stance.",
- "hybrid": "{He} swings {his} arms and explodes up onto the box in one jump, lands softly, stands tall, then steps back down to the exact starting stance.",
+ "hybrid": "{He} bursts into a fast high-knees sprint on the spot for a few seconds, arms pumping hard, the weighted vest bouncing slightly, then slows down and settles back into the exact starting stance.",
  "stage_m": "He raises both arms into a front double-biceps pose, holds it flexed for a moment, then relaxes back to the exact starting pose while the spotlights shimmer.",
  "stage_w": "She turns a quarter to the side with one hand on her hip in a confident stage pose, holds it, then turns back to the exact starting pose while the spotlights shimmer."}
 KIDS = "{his} two children, a boy about 8 and a girl about 6 in casual clothes"

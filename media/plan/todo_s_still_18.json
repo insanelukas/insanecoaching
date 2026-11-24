@@ -1,0 +1,100 @@
+{
+ "requests": [
+  {
+   "index": 2144,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "f5e31ca8-46b8-40af-8b9e-0e9a41b09cde"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same hybrid athlete build), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a trail running vest, a top and shorts. Scene: A coastal ridge trail at sunrise with the sea far below. She runs along the trail with light, strong strides. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2145,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "a2ef4453-a706-418c-88da-2f2ff6a3e89a"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same fitness competitor physique), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing jeans and a fitted top, with a gold medal around her neck. Scene: A bright living room at sunset with a trophy on the shelf. She flexes one arm playfully while her two children, a boy about 8 and a girl about 6 in casual clothes, copy the pose beside her, flexing their arms and laughing. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2146,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "a2ef4453-a706-418c-88da-2f2ff6a3e89a"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same fitness competitor physique), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing an elegant long evening gown that shows her toned shoulders and arms. Scene: A gala evening in a grand hotel lobby with warm lights. She walks down a wide staircase while guests below look up at her. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2147,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "a2ef4453-a706-418c-88da-2f2ff6a3e89a"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same fitness competitor physique), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a sparkling two-piece fitness competition suit. Scene: A fitness competition stage under warm spotlights. A judge in a suit hands her a gold trophy and shakes her hand while the audience applauds in the dark hall. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2148,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "a2ef4453-a706-418c-88da-2f2ff6a3e89a"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same fitness competitor physique), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a satin robe over her competition suit. Scene: A backstage dressing room with a mirror framed by warm bulbs. She looks at her reflection before stepping on stage, focused and proud. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2149,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "a2ef4453-a706-418c-88da-2f2ff6a3e89a"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same fitness competitor physique), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a fitted top and leggings. Scene: A bright modern kitchen in the morning. She plates a colourful healthy meal of chicken, rice and vegetables at the counter, looking energetic. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  }
+ ]
+}

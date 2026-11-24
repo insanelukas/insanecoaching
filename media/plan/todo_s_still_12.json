@@ -1,0 +1,132 @@
+{
+ "requests": [
+  {
+   "index": 2096,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "e76670f0-cda8-4117-99ca-0ebbad5916bd"
+     }
+    ],
+    "prompt": "Same man as in the reference image (same face, same hair, same competition bodybuilder physique), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. He is wearing a tailored black tuxedo that fits his broad shoulders. Scene: A gala evening in a grand hotel lobby with warm lights. He walks down a wide staircase while guests below look up at him. Medium-wide shot, his whole body visible, he is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2097,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "e76670f0-cda8-4117-99ca-0ebbad5916bd"
+     }
+    ],
+    "prompt": "Same man as in the reference image (same face, same hair, same competition bodybuilder physique), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. He is wearing black posing trunks. Scene: A fitness competition stage under warm spotlights. A judge in a suit hands him a gold trophy and shakes his hand while the audience applauds in the dark hall. Medium-wide shot, his whole body visible, he is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2098,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "e76670f0-cda8-4117-99ca-0ebbad5916bd"
+     }
+    ],
+    "prompt": "Same man as in the reference image (same face, same hair, same competition bodybuilder physique), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. He is wearing a black robe open over posing trunks. Scene: A backstage dressing room with a mirror framed by warm bulbs. He looks at his reflection before stepping on stage, focused and proud. Medium-wide shot, his whole body visible, he is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2099,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "e76670f0-cda8-4117-99ca-0ebbad5916bd"
+     }
+    ],
+    "prompt": "Same man as in the reference image (same face, same hair, same competition bodybuilder physique), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. He is wearing a fitted t-shirt and joggers. Scene: A bright modern kitchen in the morning. He plates a colourful healthy meal of chicken, rice and vegetables at the counter, looking energetic. Medium-wide shot, his whole body visible, he is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2100,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "52af253b-51f7-48d4-8077-bb23c7f114a8"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same slim), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a fitted t-shirt and leggings. Scene: A green city park at golden hour. She runs across the grass holding a kite string, with her two children, a boy about 8 and a girl about 6 in casual clothes, running beside her and laughing; the children are seen from the side or from behind; a colourful kite flies above. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2101,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "52af253b-51f7-48d4-8077-bb23c7f114a8"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same slim), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing an elegant fitted knee-length dress. Scene: A rooftop evening party at sunset with string lights and a city view. She walks in with an easy, confident smile while guests holding drinks turn their heads toward her. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2102,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "52af253b-51f7-48d4-8077-bb23c7f114a8"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same slim), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a running top and running shorts. Scene: The finish line of a city road race at sunset under a plain arch without any lettering. She has just crossed the line and a friend gives her a high-five while spectators behind the barriers clap. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2103,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "52af253b-51f7-48d4-8077-bb23c7f114a8"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same slim), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing well-fitting jeans and a fitted top. Scene: A bright bedroom in morning light with a tall standing mirror. She stands in front of the mirror tightening her belt one notch and smiles at her reflection. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  }
+ ]
+}

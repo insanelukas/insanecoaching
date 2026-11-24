@@ -1,0 +1,132 @@
+{
+ "requests": [
+  {
+   "index": 2136,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "12af6ca4-24f6-4d20-b91e-123d968c7ffe"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same strong), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a fitted sleeveless top and tailored trousers. Scene: A modern glass-walled meeting room high above a coastal city. She walks toward the head of the table with strong posture, her toned arms and shoulders visible, while four seated colleagues in business clothes turn their heads to look at her. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2137,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "12af6ca4-24f6-4d20-b91e-123d968c7ffe"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same strong), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a sports top and high-waisted leggings. Scene: A gritty industrial warehouse gym. She stands tall at the top of a heavy barbell deadlift while three gym members behind her watch and clap. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2138,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "12af6ca4-24f6-4d20-b91e-123d968c7ffe"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same strong), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a fitted dress. Scene: A stylish clothing shop fitting area with a large mirror and warm light. She looks at her reflection, adjusts the fit and smiles with quiet pride. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2139,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "12af6ca4-24f6-4d20-b91e-123d968c7ffe"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same strong), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a fitted t-shirt, hiking shorts, a backpack and trail shoes. Scene: A hill trail above a coastal city at sunrise. She hikes uphill at a strong pace, breathing easily. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2140,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "f5e31ca8-46b8-40af-8b9e-0e9a41b09cde"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same hybrid athlete build), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a fitted t-shirt and leggings. Scene: A suburban driveway with a basketball hoop above the garage door at sunset. She laughs as she dribbles a basketball past her two children, a boy about 8 and a girl about 6 in casual clothes, who chase her; the children are seen from the side or from behind. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2141,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "f5e31ca8-46b8-40af-8b9e-0e9a41b09cde"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same hybrid athlete build), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a light fitted summer dress. Scene: A beach club terrace at sunset. She arrives with a relaxed smile; friends at a table wave and people nearby glance over at her. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2142,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "f5e31ca8-46b8-40af-8b9e-0e9a41b09cde"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same hybrid athlete build), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a sports top and leggings, with a finisher medal around her neck. Scene: The finish area of an indoor fitness race with sleds and rowing machines in the background. She stands catching her breath while another competitor shakes her hand and pats her shoulder. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  },
+  {
+   "index": 2143,
+   "params": {
+    "model": "nano_banana_pro",
+    "resolution": "2k",
+    "use_unlim": true,
+    "aspect_ratio": "4:3",
+    "medias": [
+     {
+      "role": "image_references",
+      "value": "f5e31ca8-46b8-40af-8b9e-0e9a41b09cde"
+     }
+    ],
+    "prompt": "Same woman as in the reference image (same face, same hair, same hybrid athlete build), same stylized photoreal AAA open-world video game in-engine cinematic look, warm golden-hour light with teal shadows, subtle film grain. She is wearing a sports top and leggings. Scene: An empty rooftop training area at sunrise above the city. Alone, she stands with hands on hips after a workout, taking a deep breath and looking out over the city, content. Medium-wide shot, her whole body visible, she is the clear focus of the image. No text, no lettering, no logos, no watermark, no game UI."
+   }
+  }
+ ]
+}

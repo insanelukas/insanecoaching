@@ -1,0 +1,142 @@
+{
+ "requests": [
+  {
+   "index": 3024,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "efbbd490-15dd-4c90-9852-128dbf79fe1e"
+     },
+     {
+      "role": "end_image",
+      "value": "efbbd490-15dd-4c90-9852-128dbf79fe1e"
+     }
+    ],
+    "prompt": "She turns a quarter to the side with one hand on her hip in a confident stage pose, holds it, then turns back to the exact starting pose while the spotlights shimmer. Her face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3025,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "fa69dbc9-ff7f-4012-955e-2dfea93d0bd5"
+     },
+     {
+      "role": "end_image",
+      "value": "fa69dbc9-ff7f-4012-955e-2dfea93d0bd5"
+     }
+    ],
+    "prompt": "She skips rope at a quick steady rhythm, light on her feet, the rope whipping around; shoulders relaxed, breathing easy. Her face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3026,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "61607346-2390-430c-b7b2-55236922061e"
+     },
+     {
+      "role": "end_image",
+      "value": "61607346-2390-430c-b7b2-55236922061e"
+     }
+    ],
+    "prompt": "She does two smooth strict pull-ups, chin over the bar each time, lowers under control and returns to the exact dead hang. Her face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3027,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "12af6ca4-24f6-4d20-b91e-123d968c7ffe"
+     },
+     {
+      "role": "end_image",
+      "value": "12af6ca4-24f6-4d20-b91e-123d968c7ffe"
+     }
+    ],
+    "prompt": "She squats down under control until her thighs are parallel to the floor and drives back up to standing, twice, the barbell steady across her upper back, and returns to the exact starting stance. Her face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3028,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "f5e31ca8-46b8-40af-8b9e-0e9a41b09cde"
+     },
+     {
+      "role": "end_image",
+      "value": "f5e31ca8-46b8-40af-8b9e-0e9a41b09cde"
+     }
+    ],
+    "prompt": "She bursts into a fast high-knees sprint on the spot for a few seconds, arms pumping hard, the weighted vest bouncing slightly, then slows down and settles back into the exact starting stance. Her face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3029,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "a2ef4453-a706-418c-88da-2f2ff6a3e89a"
+     },
+     {
+      "role": "end_image",
+      "value": "a2ef4453-a706-418c-88da-2f2ff6a3e89a"
+     }
+    ],
+    "prompt": "She turns a quarter to the side with one hand on her hip in a confident stage pose, holds it, then turns back to the exact starting pose while the spotlights shimmer. Her face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  }
+ ]
+}
