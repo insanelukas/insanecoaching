@@ -81,18 +81,19 @@ code { font: 600 1rem/1 ui-monospace, Menlo, Consolas, monospace; color: #FFD23F
 </main>
 <script>
 (function () {
-  var ORDER = { sex: ["m", "w"], goal: ["fat", "athletic", "muscle", "hybrid", "stage", "unsure"], why: ["kids", "room", "respect", "self", "health"], tried: ["diets", "alone", "coach", "all", "none"], blocker: ["work", "travel", "family", "motivation", "food"], start: ["week", "month", "looking"] };
-  var KEYS = ["sex", "goal", "why", "tried", "blocker", "start"];
+  var ORDER = { sex: ["m", "w"], age: ["a", "b", "c"], goal: ["fat", "athletic", "muscle", "hybrid", "stage", "unsure"], why: ["kids", "room", "respect", "self", "health"], tried: ["diets", "alone", "coach", "all", "none"], blocker: ["work", "travel", "family", "motivation", "food"], start: ["week", "month", "looking"] };
+  /* the age was added last (v16): a code from before has six characters and no age */
+  var KEYS = ["sex", "goal", "why", "tried", "blocker", "start", "age"];
   var L = {
-    lt: { k: { sex: "Rezultatai", goal: "Tikslas", why: "Kodėl", tried: "Bandė", blocker: "Trukdo", start: "Startas" }, none: "neatsakė", shape: "formos ir jėga",
-      sex: { m: "vyrų", w: "moterų" },
+    lt: { k: { sex: "Lytis", age: "Amžius", goal: "Tikslas", why: "Kodėl", tried: "Bandė", blocker: "Trukdo", start: "Startas" }, none: "neatsakė", shape: "formos ir jėga",
+      sex: { m: "vyras", w: "moteris" }, age: { a: "iki 30", b: "30–44", c: "45+" },
       goal: { fat: "numesti svorio", athletic: "atletiška forma", muscle: "masė ir jėga", hybrid: "hybrid: bėgimas ir jėga", stage: "scena, varžybos", unsure: "dar nežino" },
       why: { kids: "dėl vaikų", room: "kad pastebėtų", respect: "pagarba, disciplina", self: "dėl savęs: fit ir stiprus", health: "energija ir sveikata" },
       tried: { diets: "dietos, svoris grįžo", alone: "sportavo be plano", coach: "treneris ar programėlė: planas ir tyla", all: "visko po truputį", none: "rimtai dar nieko" },
       blocker: { work: "darbas", travel: "kelionės", family: "šeima", motivation: "dingsta motyvacija", food: "nežino, ką valgyti" },
       start: { week: "šią savaitę", month: "šį mėnesį", looking: "kol kas domisi" } },
-    en: { k: { sex: "Results shown", goal: "Goal", why: "Why", tried: "Tried", blocker: "In the way", start: "Start" }, none: "no answer", shape: "shape and strength",
-      sex: { m: "men's", w: "women's" },
+    en: { k: { sex: "Sex", age: "Age", goal: "Goal", why: "Why", tried: "Tried", blocker: "In the way", start: "Start" }, none: "no answer", shape: "shape and strength",
+      sex: { m: "man", w: "woman" }, age: { a: "under 30", b: "30–44", c: "45+" },
       goal: { fat: "lose fat", athletic: "look athletic", muscle: "muscle and strength", hybrid: "hybrid: run and lift", stage: "stage, competition", unsure: "not sure yet" },
       why: { kids: "for the kids", room: "to be noticed", respect: "respect, discipline", self: "for myself: fit and strong", health: "energy and health" },
       tried: { diets: "diets, the weight came back", alone: "trained alone, no plan", coach: "coach or app: a plan, then silence", all: "a bit of everything", none: "nothing serious yet" },
@@ -101,14 +102,15 @@ code { font: 600 1rem/1 ui-monospace, Menlo, Consolas, monospace; color: #FFD23F
   };
   function decode(t) {
     t = String(t || "").trim().replace(/^.*#/, "").toLowerCase();
-    if (!/^q[0-9a-z]{6}$/.test(t)) return null;
+    if (!/^q[0-9a-z]{6,7}$/.test(t)) return null;
     var o = {}, ok = true;
     KEYS.forEach(function (k, i) { var n = parseInt(t.charAt(i + 1), 36); if (n > ORDER[k].length) ok = false; o[k] = n ? ORDER[k][n - 1] : ""; });
     return ok ? o : null;
   }
   function fill(id, lang, o) {
     var dl = document.getElementById(id); dl.innerHTML = "";
-    KEYS.forEach(function (k) {
+    ["sex", "age", "goal", "why", "tried", "blocker", "start"].forEach(function (k) {
+      if (k === "age" && !o.age) return;
       var v = o[k] ? (k === "goal" && o.goal === "muscle" && o.sex === "w" ? L[lang].shape : L[lang][k][o[k]]) : L[lang].none;
       var dt = document.createElement("dt"), dd = document.createElement("dd");
       dt.textContent = L[lang].k[k]; dd.textContent = v; dl.appendChild(dt); dl.appendChild(dd);
