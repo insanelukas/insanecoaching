@@ -268,14 +268,25 @@ def main():
     elif cmd == "next":
         # python3 gen.py next N: the next N jobs to submit -> plan/next_vid.json and plan/next_img.json.
         # Videos first (all character loops, then end scenes whose still is finished and approved), stills fill the rest.
+        # plan/pending.json (local to the machine that plans) remembers what was planned but is not in ids.txt yet,
+        # so several batches can be planned before the ids are written down. "unplan IDX..." takes indexes back.
         n = int(sys.argv[2]) if len(sys.argv) > 2 else 8
         J, S, A = load()
-        cv = [i for i in range(3000, 3000 + len(G)) if i not in J and (i - 2000) in S]
-        cv += [i for i in range(4000, 4000 + len(S_)) if i not in J and (i - 2000) in A and (i - 2000) in S]
-        ci = [i for i in range(1000, 1000 + len(G)) if i not in J] + [i for i in range(2000, 2000 + len(S_)) if i not in J and request(i, J)]
-        tv = cv[:n]; ti = ci[:max(0, n - len(tv))]
+        pf = os.path.join(HERE, "plan", "pending.json")
+        pend = [i for i in (json.load(open(pf)) if os.path.exists(pf) else []) if i not in J]
+        busy = set(J) | set(pend)
+        cv = [i for i in range(3000, 3000 + len(G)) if i not in busy and (i - 2000) in S]
+        cv += [i for i in range(4000, 4000 + len(S_)) if i not in busy and (i - 2000) in A and (i - 2000) in S]
+        ci = [i for i in range(1000, 1000 + len(G)) if i not in busy] + [i for i in range(2000, 2000 + len(S_)) if i not in busy and request(i, J)]
+        kind = sys.argv[3] if len(sys.argv) > 3 else ""
+        tv = [] if kind == "img" else cv[:n]; ti = [] if kind == "vid" else ci[:max(0, n - len(tv))]
         write("next_vid", tv, J); write("next_img", ti, J)
-        print(json.dumps(dict(vid=tv, img=ti, left=dict(vid=len(cv) - len(tv), img=len(ci) - len(ti)))))
+        json.dump(pend + tv + ti, open(pf, "w"))
+        print(json.dumps(dict(vid=tv, img=ti, left=dict(vid=len(cv) - len(tv), img=len(ci) - len(ti)), pending=len(pend) + len(tv) + len(ti))))
+    elif cmd == "unplan":
+        pf = os.path.join(HERE, "plan", "pending.json"); drop = set(int(x) for x in sys.argv[2:])
+        pend = [i for i in (json.load(open(pf)) if os.path.exists(pf) else []) if i not in drop]
+        json.dump(pend, open(pf, "w")); print(json.dumps(pend))
     elif cmd == "status":
         J, S, A = load()
         def c(a, b): return [sum(1 for i in range(a, b) if i in J), sum(1 for i in range(a, b) if i in S)]
