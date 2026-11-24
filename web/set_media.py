@@ -1,9 +1,12 @@
 # set_media.py MODE [IDS]: writes the MEDIA line of insane-coaching.html from the generation log (ids.txt of the media work branch).
 #   cdn    clips and stills straight from the Higgsfield result addresses (stills: the service's own smaller .webp copy)
-#   hybrid clips from the Higgsfield result addresses, stills from this site: media-out/img/g|s/<key>.jpg, the first frame of that very
-#          clip (tiles.py files them; stills.json says which clip each was taken from). The video model re-renders the scene, so a clip
-#          does not open on the still it was generated from; its own first frame is the still that does not jump. A key without such a
-#          still falls back to the service's copy of the generated still, as in cdn.
+#   hybrid files of this site wherever media-out has them for the clip in use, the Higgsfield result address otherwise:
+#          stills  media-out/img/g|s/<key>.jpg, the first frame of that very clip (tiles.py files them; stills.json says which clip each
+#                  was taken from). The video model re-renders the scene, so a clip does not open on the still it was generated from;
+#                  its own first frame is the still that does not jump. Fallback: the service's copy of the generated still, as in cdn.
+#          clips   media-out/vid/g|s/<key>.mp4, the small web encode made by media/build.py in the media workflow (clips.json = its
+#                  done.json: which job each file was made from). Fallback: the full-size file at the service.
+#          When every entry is a file of this site, "base" is empty and the page asks the service for nothing.
 #   local  files in this site: vid/g, vid/s, img/g, img/s (only the keys whose files exist under ./media-out)
 #   none   empty: no generated pictures
 import io, json, os, re, sys
@@ -17,11 +20,18 @@ LIVE = os.environ.get('SITE_BASE', 'https://insanelukas.github.io/insanecoaching
 M = dict(base='', g={}, s={})
 if MODE in ('cdn', 'hybrid'):
     M['base'] = CDN
-    out = os.path.join(HERE, 'media-out'); own = {}; n_own = 0
+    out = os.path.join(HERE, 'media-out'); own = {}; n_own = 0; mine = {}; n_mine = 0
     if MODE == 'hybrid':
         M['site'] = LIVE
         own = json.load(io.open(os.path.join(out, 'stills.json'), encoding='utf-8'))
+        cj = os.path.join(out, 'clips.json'); mine = json.load(io.open(cj, encoding='utf-8')) if os.path.exists(cj) else {}
     f = lambda i, ext: 'hf_%s_%s%s' % (S[i], J[i], ext) if i in S and i in J else ''
+    def clip(kind, k, i):
+        # the small encode of this site when it was made from the clip in use
+        global n_mine
+        p = 'vid/%s/%s.mp4' % (kind, k); q = os.path.join(out, p)
+        if i in S and mine.get(kind + ':' + k) == J.get(i) and os.path.exists(q) and os.path.getsize(q) > 10000: n_mine += 1; return p
+        return f(i, '.mp4')
     def still(kind, k, i, gen_still):
         # the clip's own first frame when it is on file for the clip in use
         global n_own
@@ -29,12 +39,15 @@ if MODE in ('cdn', 'hybrid'):
         if i in S and own.get(kind + ':' + k) == J.get(i) and os.path.exists(os.path.join(out, p)): n_own += 1; return p
         return f(gen_still, '_min.webp')
     for n, k in enumerate(G):
-        v, p = f(3000 + n, '.mp4'), still('g', k, 3000 + n, 1000 + n)
+        v, p = clip('g', k, 3000 + n), still('g', k, 3000 + n, 1000 + n)
         if v or p: M['g'][k] = [v, p]
     for n, k in enumerate(SK):
-        v, p = f(4000 + n, '.mp4'), still('s', k, 4000 + n, 2000 + n)
+        v, p = clip('s', k, 4000 + n), still('s', k, 4000 + n, 2000 + n)
         if v and p and (2000 + n) in A: M['s'][k] = [v, p]
-    if MODE == 'hybrid': print('stills of this site', n_own, 'of', len(M['g']) + len(M['s']))
+    if MODE == 'hybrid':
+        n_all = len(M['g']) + len(M['s'])
+        if all(x == '' or x.startswith(('img/', 'vid/')) for kind in ('g', 's') for pair in M[kind].values() for x in pair): M['base'] = ''
+        print('stills of this site', n_own, 'of', n_all, '| clips of this site', n_mine, 'of', sum(1 for kind in ('g', 's') for pair in M[kind].values() if pair[0]), '| service base', repr(M['base']))
 elif MODE == 'local':
     out = os.path.join(HERE, 'media-out')
     for kind, keys in (('g', G), ('s', SK)):
