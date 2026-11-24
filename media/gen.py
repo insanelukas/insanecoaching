@@ -105,8 +105,9 @@ SC = {
     move="{He} walks toward the camera with the child riding up high, bouncing playfully; the other child skips alongside, laughing."),
   "room": dict(m="a fitted white dress shirt with the sleeves rolled up and dark trousers", w="a fitted sleeveless top and tailored trousers",
     scene_m="A modern glass-walled meeting room high above a coastal city. Seen from behind, he walks toward the head of the table, his broad shoulders, thick forearms and V-shaped back clearly visible, while four seated colleagues in business clothes turn their heads to look at him.",
-    scene_w="A modern glass-walled meeting room high above a coastal city. She walks toward the head of the table with strong posture, her toned arms and shoulders visible, while four seated colleagues in business clothes turn their heads to look at her.",
-    move="{He} walks toward the head of the table and places {his} hands on it; the seated colleagues turn their heads to look at {him}."),
+    scene_w="A modern glass-walled meeting room high above a coastal city. Seen from the front at eye level, she stands at the head of the table facing the camera with strong posture and a confident smile, her hands resting on the table, her toned arms and shoulders visible, while four seated colleagues in business clothes look at her.",
+    move="{He} walks toward the head of the table and places {his} hands on it; the seated colleagues turn their heads to look at {him}.",
+    move_w="She finishes her point with a confident gesture and smiles; the seated colleagues nod and one applauds lightly; the camera pushes in slowly at eye level, staying in front of her."),
   "respect": dict(m="a fitted grey t-shirt and black training shorts", w="a sports top and high-waisted leggings",
     scene="A gritty industrial warehouse gym. {He} stands tall at the top of a heavy barbell deadlift while three gym members behind {him} watch and clap.",
     move="{He} holds the heavy barbell at a strong lockout, lowers it under control and stands tall; the gym members behind {him} clap."),
@@ -190,7 +191,7 @@ def s_still(key):
             f"{p['He']} is wearing {d[sex]}. Scene: {scene} Medium-wide shot, {p['his']} whole body visible, {p['he']} is the clear focus of the image. {NEG}")
 def s_video(key):
     sa, goal, why = key.split("-"); sex = sa[0]; p = PR[sex]; d = SCX.get(key) or SC[goal][why]
-    return (d["move"].format(**p) + f" {p['His']} face, hair, body and clothing stay consistent with the image. "
+    return (pick(d, "move", sex).format(**p) + f" {p['His']} face, hair, body and clothing stay consistent with the image. "
             "Smooth natural motion, gentle camera movement, no cuts, no new objects, no text.")
 
 DROPPED = set()   # indexes whose last line in ids.txt forgets the job (filled by load)
