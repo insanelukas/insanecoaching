@@ -6,7 +6,8 @@ still under each clip, and a still with another framing jumps when the clip star
 
   python3 media/frames.py OUT g|s [SHEET ...]     # all sheets of that kind, or only the numbered ones
 
-  OUT/<kind>_<n>.jpg   a sheet of tiles in one column: g (character loops) 720 x 960, 6 per sheet; s (end scenes) 832 x 624, 9 per sheet.
+  OUT/<kind>_<n>.jpg   a sheet of tiles in one column: g (character loops) 720 x 960, 6 per sheet; s (end scenes) 832 x 624, 6 per sheet
+                       (nine scenes per sheet only fitted at quality 69-72; six fit at about 80).
                        Baseline JPEG 4:2:0, at most 500 kB (the sandbox returns up to 512 KiB of pictures per call).
                        Every tile starts on a 16 px boundary, so `jpegtran -crop` cuts tiles out without encoding them again.
                        The JPEG comment holds JSON: {"sheet", "q", "cols", "tile": [w, h], "keys": [...], "jobs": [...]}
@@ -21,7 +22,7 @@ import gen
 CDN = "https://d8j0ntlcm91z4.cloudfront.net/user_3MPJSUjilmNLdPB2lfi6BMrs1ga/hf_{stamp}_{job}.mp4"
 CACHE = os.path.expanduser("~/ic/cache"); os.makedirs(CACHE, exist_ok=True)
 # one column per sheet: a tall strip is shown small to whoever looks at the returned picture, while the file keeps every pixel
-KIND = {"g": dict(base=3000, tile=(720, 960), cols=1, rows=6), "s": dict(base=4000, tile=(832, 624), cols=1, rows=9)}
+KIND = {"g": dict(base=3000, tile=(720, 960), cols=1, rows=6), "s": dict(base=4000, tile=(832, 624), cols=1, rows=6)}
 LIMIT = 500000
 
 def frame(i, job, stamp):
