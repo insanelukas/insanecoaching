@@ -177,15 +177,19 @@ def g_video(key):
     return (pick(MOVE, goal, sex).format(**p) + f" {p['His']} face, body size, clothing and the surroundings stay exactly as in the image. "
             "Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly.")
 # outfits replaced after the video model refused a scene still (it read as a known film character); key -> what the character wears
-WEARX = {"ma-stage-room": "a tailored midnight-blue suit with an open-collar white shirt, no tie"}
+WEARX = {}
+# whole scenes replaced after the video model refused two stills of the original scene (it read as a known film character); key -> scene entry
+SCX = {"ma-stage-room": dict(m="a fitted black dress shirt with the top button open and tailored grey trousers",
+    scene="An art gallery opening in the evening with warm spotlights on the paintings. {He} walks in with calm confidence while guests holding glasses turn to look at {him}.",
+    move="{He} walks through the gallery with calm confidence; guests turn to look and a few smile; the camera glides backward in front of {him}.")}
 def s_still(key):
-    sa, goal, why = key.split("-"); sex = sa[0]; p = PR[sex]; d = SC[goal][why]
+    sa, goal, why = key.split("-"); sex = sa[0]; p = PR[sex]; d = SCX.get(key) or SC[goal][why]
     if key in WEARX: d = dict(d, **{sex: WEARX[key]})
     scene = pick(d, "scene", sex).format(**p)
     return (f"Same {p['n']} as in the reference image (same face, same hair, same {BUILD[sex][goal].split(',')[0].split(' with')[0]}), {STYLE_REF}. "
             f"{p['He']} is wearing {d[sex]}. Scene: {scene} Medium-wide shot, {p['his']} whole body visible, {p['he']} is the clear focus of the image. {NEG}")
 def s_video(key):
-    sa, goal, why = key.split("-"); sex = sa[0]; p = PR[sex]; d = SC[goal][why]
+    sa, goal, why = key.split("-"); sex = sa[0]; p = PR[sex]; d = SCX.get(key) or SC[goal][why]
     return (d["move"].format(**p) + f" {p['His']} face, hair, body and clothing stay consistent with the image. "
             "Smooth natural motion, gentle camera movement, no cuts, no new objects, no text.")
 
