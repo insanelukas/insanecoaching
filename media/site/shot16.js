@@ -13,7 +13,7 @@ const [FILE, OUT, LG, SEX, AGE, GOAL, WHY, W, H] = process.argv.slice(2);
   });
   let n = 0; const snap = async (name) => { await p.screenshot({ path: path.join(OUT, String(++n).padStart(2, '0') + '-' + name + '.png') }); };
   const click = async (sel, wait) => { await p.click(sel); await p.waitForTimeout(wait || 450); };
-  await p.goto('file://' + path.resolve(FILE) + '#' + LG, { waitUntil: 'domcontentloaded' }); await p.waitForTimeout(500);
+  await p.goto((/^https?:/.test(FILE) ? FILE : 'file://' + path.resolve(FILE)) + '#' + LG, { waitUntil: 'domcontentloaded' }); await p.waitForTimeout(500);
   await p.evaluate(() => { try { localStorage.setItem('ic-consent', 'none'); } catch (e) {} });
   await p.reload({ waitUntil: 'domcontentloaded' }); await p.waitForTimeout(500);
   await click('#hero-cta', 400); await snap('s1');
