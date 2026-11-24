@@ -181,7 +181,8 @@ def g_video(key):
             "Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly.")
 # outfits replaced for one key: after the video model refused a scene still (it read as a known film character),
 # or after a clip framed the outfit more revealingly than the page should show; key -> what the character wears
-WEARX = {"wa-stage-self": "an elegant satin robe tied closed at the waist",
+WEARX = {"wb-stage-self": "an elegant satin robe tied closed at the waist",
+         "wa-stage-self": "an elegant satin robe tied closed at the waist",
          "wc-stage-self": "an elegant satin robe tied closed at the waist"}
 # whole scenes replaced after the video model refused two stills of the original scene (it read as a known film character); key -> scene entry
 SCX = {"ma-stage-room": dict(m="a fitted black dress shirt with the top button open and tailored grey trousers",
