@@ -176,8 +176,11 @@ def g_video(key):
     sa, goal = key.split("-"); sex = sa[0]; p = PR[sex]
     return (pick(MOVE, goal, sex).format(**p) + f" {p['His']} face, body size, clothing and the surroundings stay exactly as in the image. "
             "Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly.")
+# outfits replaced after the video model refused a scene still (it read as a known film character); key -> what the character wears
+WEARX = {"ma-stage-room": "a tailored midnight-blue suit with an open-collar white shirt, no tie"}
 def s_still(key):
     sa, goal, why = key.split("-"); sex = sa[0]; p = PR[sex]; d = SC[goal][why]
+    if key in WEARX: d = dict(d, **{sex: WEARX[key]})
     scene = pick(d, "scene", sex).format(**p)
     return (f"Same {p['n']} as in the reference image (same face, same hair, same {BUILD[sex][goal].split(',')[0].split(' with')[0]}), {STYLE_REF}. "
             f"{p['He']} is wearing {d[sex]}. Scene: {scene} Medium-wide shot, {p['his']} whole body visible, {p['he']} is the clear focus of the image. {NEG}")
