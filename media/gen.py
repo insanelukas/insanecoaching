@@ -161,8 +161,11 @@ def hair(sex, goal, age):
     if age == "c":
         look += ", a few lines on his face" if sex == "m" else ", fine lines on her face and a healthy glow"
     return look
+# looks replaced after the video model refused the first still (a likeness check); key -> look
+LOOKX = {"mb-athletic": "short sandy-brown textured hair, a short trimmed beard, an original fictional face that does not resemble any real person"}
 def person(sex, age, goal):
-    return f"A {YEARS[age]}-year-old {PR[sex]['n']} with a {BUILD[sex][goal]}, {hair(sex, goal, age)}"
+    look = LOOKX.get(f"{sex}{age}-{goal}") or hair(sex, goal, age)
+    return f"A {YEARS[age]}-year-old {PR[sex]['n']} with a {BUILD[sex][goal]}, {look}"
 def pick(d, base, sex):
     return d.get(f"{base}_{sex}", d.get(base))
 def g_still(key):

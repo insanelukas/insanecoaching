@@ -1,0 +1,27 @@
+{
+ "requests": [
+  {
+   "index": 3001,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "9c6faee4-99b8-4cea-9799-aa0b0ef9640c"
+     },
+     {
+      "role": "end_image",
+      "value": "9c6faee4-99b8-4cea-9799-aa0b0ef9640c"
+     }
+    ],
+    "prompt": "He does two smooth strict pull-ups, chin over the bar each time, lowers under control and returns to the exact dead hang. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  }
+ ]
+}
