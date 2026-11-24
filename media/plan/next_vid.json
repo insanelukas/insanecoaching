@@ -1,0 +1,188 @@
+{
+ "requests": [
+  {
+   "index": 3001,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "9c6faee4-99b8-4cea-9799-aa0b0ef9640c"
+     },
+     {
+      "role": "end_image",
+      "value": "9c6faee4-99b8-4cea-9799-aa0b0ef9640c"
+     }
+    ],
+    "prompt": "He does two smooth strict pull-ups, chin over the bar each time, lowers under control and returns to the exact dead hang. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3002,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "5e2163ec-8ffc-475d-8b7c-bc6e7e5967e8"
+     },
+     {
+      "role": "end_image",
+      "value": "5e2163ec-8ffc-475d-8b7c-bc6e7e5967e8"
+     }
+    ],
+    "prompt": "He curls both dumbbells up to his shoulders with controlled power, squeezes his biceps at the top, then lowers them slowly back to his sides and returns to the exact starting stance. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3003,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "2f29276e-7a9e-49ba-8ba1-d7fe54331980"
+     },
+     {
+      "role": "end_image",
+      "value": "2f29276e-7a9e-49ba-8ba1-d7fe54331980"
+     }
+    ],
+    "prompt": "He bursts into a fast high-knees sprint on the spot for a few seconds, arms pumping hard, the weighted vest bouncing slightly, then slows down and settles back into the exact starting stance. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3004,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "60868beb-d40f-4e10-8da9-5fc0dcdafe45"
+     },
+     {
+      "role": "end_image",
+      "value": "60868beb-d40f-4e10-8da9-5fc0dcdafe45"
+     }
+    ],
+    "prompt": "He raises both arms into a front double-biceps pose, holds it flexed for a moment, then relaxes back to the exact starting pose while the spotlights shimmer. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3007,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "3b6e1325-7c0d-4141-8ca6-8218afbad6ff"
+     },
+     {
+      "role": "end_image",
+      "value": "3b6e1325-7c0d-4141-8ca6-8218afbad6ff"
+     }
+    ],
+    "prompt": "He curls both dumbbells up to his shoulders with controlled power, squeezes his biceps at the top, then lowers them slowly back to his sides and returns to the exact starting stance. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3008,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "e7619bc5-ff03-4e26-b3a6-c794f2c10d8d"
+     },
+     {
+      "role": "end_image",
+      "value": "e7619bc5-ff03-4e26-b3a6-c794f2c10d8d"
+     }
+    ],
+    "prompt": "He bursts into a fast high-knees sprint on the spot for a few seconds, arms pumping hard, the weighted vest bouncing slightly, then slows down and settles back into the exact starting stance. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3009,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "26102100-933b-4ee3-90ca-3d134725e7b3"
+     },
+     {
+      "role": "end_image",
+      "value": "26102100-933b-4ee3-90ca-3d134725e7b3"
+     }
+    ],
+    "prompt": "He raises both arms into a front double-biceps pose, holds it flexed for a moment, then relaxes back to the exact starting pose while the spotlights shimmer. His face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  },
+  {
+   "index": 3010,
+   "params": {
+    "model": "seedance_2_5",
+    "mode": "omni_reference",
+    "resolution": "720p",
+    "duration": 5,
+    "generate_audio": false,
+    "use_unlim": true,
+    "aspect_ratio": "3:4",
+    "medias": [
+     {
+      "role": "start_image",
+      "value": "7fdeff21-2a7c-4f25-9ea1-f05979923505"
+     },
+     {
+      "role": "end_image",
+      "value": "7fdeff21-2a7c-4f25-9ea1-f05979923505"
+     }
+    ],
+    "prompt": "She skips rope at a quick steady rhythm, light on her feet, the rope whipping around; shoulders relaxed, breathing easy. Her face, body size, clothing and the surroundings stay exactly as in the image. Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly."
+   }
+  }
+ ]
+}

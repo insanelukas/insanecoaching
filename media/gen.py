@@ -186,15 +186,33 @@ def s_video(key):
     return (d["move"].format(**p) + f" {p['His']} face, hair, body and clothing stay consistent with the image. "
             "Smooth natural motion, gentle camera movement, no cuts, no new objects, no text.")
 
-def ids():
-    out = {}
+def load():
+    """ids.txt is an event log. Lines:
+      IDX JOB [STAMP]   a new job for IDX (clears its stamp and approval)
+      S IDX STAMP       the job finished; STAMP is the YYYYMMDD_HHMMSS part of its result URL
+      A IDX|IDX-IDX ... the current jobs of these indexes passed the visual check
+      IDX -             forget the job of IDX (it will be made again)
+    Returns (jobs, stamps, approved)."""
+    J, S, A = {}, {}, set()
     f = os.path.join(HERE, "ids.txt")
-    if os.path.exists(f):
-        for ln in open(f):
-            t = ln.split()
-            if len(t) >= 2 and t[0].isdigit():
-                out[int(t[0])] = t[1]
-    return out
+    if not os.path.exists(f): return J, S, A
+    for ln in open(f):
+        t = ln.split()
+        if len(t) < 2: continue
+        if t[0] == "S" and len(t) >= 3: S[int(t[1])] = t[2]
+        elif t[0] == "A":
+            for x in t[1:]:
+                a, _, b = x.partition("-")
+                for i in range(int(a), int(b or a) + 1): A.add(i)
+        elif t[0].isdigit():
+            i = int(t[0]); S.pop(i, None); A.discard(i)
+            if t[1] == "-": J.pop(i, None)
+            else:
+                J[i] = t[1]
+                if len(t) >= 3: S[i] = t[2]
+    return J, S, A
+def ids():
+    return load()[0]
 
 IMG = dict(model="nano_banana_pro", resolution="2k", use_unlim=True)
 VID = dict(model="seedance_2_5", mode="omni_reference", resolution="720p", duration=5, generate_audio=False, use_unlim=True)
@@ -224,7 +242,7 @@ def write(name, idxs, J):
     return len(reqs)
 
 def main():
-    J = ids(); G, S = gkeys(), skeys(); cmd = sys.argv[1] if len(sys.argv) > 1 else "plan"
+    J = ids(); G, S = gkeys(), skeys(); S_ = S; cmd = sys.argv[1] if len(sys.argv) > 1 else "plan"
     if cmd == "plan":
         os.makedirs(os.path.join(HERE, "plan"), exist_ok=True)
         json.dump(dict(g=G, s=S), open(os.path.join(HERE, "plan", "keys.json"), "w"), indent=0)
@@ -246,6 +264,22 @@ def main():
         for b in range(0, len(todo), size):
             write(f"todo_{kind}_{b // size:02d}", todo[b:b + size], J); out.append(todo[b:b + size])
         print(json.dumps(out))
+    elif cmd == "next":
+        # python3 gen.py next N: the next N jobs to submit -> plan/next_vid.json and plan/next_img.json.
+        # Videos first (all character loops, then end scenes whose still is finished and approved), stills fill the rest.
+        n = int(sys.argv[2]) if len(sys.argv) > 2 else 8
+        J, S, A = load()
+        cv = [i for i in range(3000, 3000 + len(G)) if i not in J and (i - 2000) in S]
+        cv += [i for i in range(4000, 4000 + len(S_)) if i not in J and (i - 2000) in A and (i - 2000) in S]
+        ci = [i for i in range(2000, 2000 + len(S_)) if i not in J]
+        tv = cv[:n]; ti = ci[:max(0, n - len(tv))]
+        write("next_vid", tv, J); write("next_img", ti, J)
+        print(json.dumps(dict(vid=tv, img=ti, left=dict(vid=len(cv) - len(tv), img=len(ci) - len(ti)))))
+    elif cmd == "status":
+        J, S, A = load()
+        def c(a, b): return [sum(1 for i in range(a, b) if i in J), sum(1 for i in range(a, b) if i in S)]
+        print(json.dumps(dict(g_still=c(1000, 1030), s_still=c(2000, 2150) + [sum(1 for i in A if 2000 <= i < 2150)], g_video=c(3000, 3030), s_video=c(4000, 4150),
+                              pending=sorted(i for i in J if i not in S))))
     elif cmd == "show":
         for x in sys.argv[2:]:
             r = request(int(x), J); print(x, json.dumps(r, ensure_ascii=False)[:1500] if r else "missing reference")

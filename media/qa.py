@@ -13,12 +13,11 @@ os.makedirs(CACHE, exist_ok=True); os.makedirs(QA, exist_ok=True)
 keys = json.load(open(os.path.join(HERE, "plan", "keys.json")))
 def key(i):
     return keys["g"][i % 1000] if (i // 1000) in (1, 3) else keys["s"][i % 1000]
+sys.path.insert(0, HERE)
+import gen
 def ids():
-    out = {}
-    for ln in open(os.path.join(HERE, "ids.txt")):
-        t = ln.split()
-        if len(t) >= 3 and t[0].isdigit(): out[int(t[0])] = (t[1], t[2])
-    return out
+    J, S, A = gen.load()
+    return {i: (J[i], S[i]) for i in J if i in S}
 def fetch(i, job, stamp):
     ext = "mp4" if i >= 3000 else "png"
     f = os.path.join(CACHE, f"{i}_{job[:8]}.{ext}")
@@ -35,13 +34,17 @@ def thumb(i, f, w, h):
         return Image.open(out).convert("RGB")
     im = Image.open(f).convert("RGB"); im.thumbnail((w, h)); bg = Image.new("RGB", (w, h), "black"); bg.paste(im, ((w - im.width) // 2, (h - im.height) // 2)); return bg
 def main():
-    first, last = int(sys.argv[1]), int(sys.argv[2]); J = ids()
+    if sys.argv[1] == "LIST":
+        want = [int(x) for x in sys.argv[2].split(",")]; first = want[0]; sys.argv = [sys.argv[0], "0", "0"] + sys.argv[3:]
+    else:
+        first, last = int(sys.argv[1]), int(sys.argv[2]); want = list(range(first, last + 1))
+    J = ids()
     video = first >= 3000; portrait = (first // 1000) in (1, 3)
     per = int(sys.argv[3]) if len(sys.argv) > 3 else (4 if video else 8)
     w, h = (150, 200) if portrait else (240, 180)
     if not video: w, h = (210, 280) if portrait else (300, 225)
     cells = []
-    for i in range(first, last + 1):
+    for i in want:
         if i not in J: continue
         f = fetch(i, *J[i])
         if not f: print("fetch failed", i); continue
