@@ -15,7 +15,8 @@ made on Higgsfield with the free unlimited generations (they end 2026-11-25 10:0
 
 ## Status and routine (updated 2026-11-24 15:00 Vilnius time)
 
-- Done: 30 character loops and 150 end scenes (25 per group: mb, ma, wb, mc, wa, wc), every still and clip looked at on contact sheets.
+- Done and live (main `c2be8a1`): 30 character loops and 150 end scenes (25 per group: mb, ma, wb, mc, wa, wc), every still and clip looked at on
+  contact sheets, every first frame looked at large on the sheets. All test suites pass on that build.
 - Found on the way: the video model re-renders the scene, so a clip does NOT open on the still it was made from (`media/match.py` measures it;
   all 156 clips measured differed, many open on a tighter framing). The page shows a still under each clip, so the site now uses each clip's own
   first frame as its still: `media/frames.py` packs the first frames into sheets (one column, at most 500 kB), a sandbox call returns a sheet as a
