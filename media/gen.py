@@ -140,7 +140,7 @@ SC = {
   "room": dict(m="a tailored black tuxedo that fits his broad shoulders", w="an elegant long evening gown that shows her toned shoulders and arms",
     scene="A gala evening in a grand hotel lobby with warm lights. {He} walks down a wide staircase while guests below look up at {him}.",
     move="{He} walks down the wide staircase with calm confidence; guests below look up and a few smile."),
-  "respect": dict(m="black posing trunks", w="a sparkling two-piece fitness competition suit",
+  "respect": dict(m="black posing trunks", w="a fitted zip-up athletic jacket and leggings, with a gold medal around her neck",
     scene="A fitness competition stage under warm spotlights. A judge in a suit hands {him} a gold trophy and shakes {his} hand while the audience applauds in the dark hall.",
     move="{He} accepts the gold trophy from the judge, shakes hands and raises the trophy slightly; the audience applauds."),
   "self": dict(m="a black robe open over posing trunks", w="a satin robe over her competition suit",
