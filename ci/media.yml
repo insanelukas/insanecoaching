@@ -1,0 +1,24 @@
+# Not active here. To use it, this file goes to .github/workflows/media.yml on the media-build branch (only with the owner's yes).
+# It turns the generation results into small web files (media/build.py) and commits them to this branch under out/.
+name: media
+on:
+  push:
+    branches: [media-build]
+    paths: ['media/ids.txt', 'media/build.py', '.github/workflows/media.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: media
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: python3 media/build.py out --jobs 4
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add out/vid out/img out/done.json
+          git diff --cached --quiet || (git commit -qm "Media: web files" && git pull -q --rebase && git push -q)

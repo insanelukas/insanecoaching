@@ -41,8 +41,8 @@ def main():
     J = ids()
     video = first >= 3000; portrait = (first // 1000) in (1, 3)
     per = int(sys.argv[3]) if len(sys.argv) > 3 else (4 if video else 8)
-    w, h = (150, 200) if portrait else (240, 180)
-    if not video: w, h = (210, 280) if portrait else (300, 225)
+    w, h = (150, 200) if portrait else (160, 120)
+    if not video: w, h = (210, 280) if portrait else ((228, 171) if per > 9 else (300, 225))
     cells = []
     for i in want:
         if i not in J: continue
@@ -50,8 +50,7 @@ def main():
         if not f: print("fetch failed", i); continue
         t = thumb(i, f, w, h); d = ImageDraw.Draw(t); lab = f"{i} {key(i)}"
         d.rectangle((0, 0, 8 + 7 * len(lab), 16), fill="black"); d.text((4, 2), lab, fill="yellow"); cells.append(t)
-    cols = 1 if video else (4 if portrait else 3)
-    if video and portrait: cols = 2
+    cols = 2 if video else (4 if portrait or per > 9 else 3)
     sheets = []
     for s in range(0, len(cells), per):
         chunk = cells[s:s + per]; cw, ch = chunk[0].size; rows = -(-len(chunk) // cols)
