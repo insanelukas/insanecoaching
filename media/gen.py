@@ -179,8 +179,10 @@ def g_video(key):
     sa, goal = key.split("-"); sex = sa[0]; p = PR[sex]
     return (pick(MOVE, goal, sex).format(**p) + f" {p['His']} face, body size, clothing and the surroundings stay exactly as in the image. "
             "Locked-off camera, no camera movement, no cuts. No new objects, no text. The last frame matches the first frame so the clip loops seamlessly.")
-# outfits replaced after the video model refused a scene still (it read as a known film character); key -> what the character wears
-WEARX = {}
+# outfits replaced for one key: after the video model refused a scene still (it read as a known film character),
+# or after a clip framed the outfit more revealingly than the page should show; key -> what the character wears
+WEARX = {"wa-stage-self": "an elegant satin robe tied closed at the waist",
+         "wc-stage-self": "an elegant satin robe tied closed at the waist"}
 # whole scenes replaced after the video model refused two stills of the original scene (it read as a known film character); key -> scene entry
 SCX = {"ma-stage-room": dict(m="a fitted black dress shirt with the top button open and tailored grey trousers",
     scene="An art gallery opening in the evening with warm spotlights on the paintings. {He} walks in with calm confidence while guests holding glasses turn to look at {him}.",
