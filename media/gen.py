@@ -189,6 +189,7 @@ def s_video(key):
     return (d["move"].format(**p) + f" {p['His']} face, hair, body and clothing stay consistent with the image. "
             "Smooth natural motion, gentle camera movement, no cuts, no new objects, no text.")
 
+DROPPED = set()   # indexes whose last line in ids.txt forgets the job (filled by load)
 def load():
     """ids.txt is an event log. Lines:
       IDX JOB [STAMP]   a new job for IDX (clears its stamp and approval)
@@ -209,9 +210,9 @@ def load():
                 for i in range(int(a), int(b or a) + 1): A.add(i)
         elif t[0].isdigit():
             i = int(t[0]); S.pop(i, None); A.discard(i)
-            if t[1] == "-": J.pop(i, None)
+            if t[1] == "-": J.pop(i, None); DROPPED.add(i)
             else:
-                J[i] = t[1]
+                DROPPED.discard(i); J[i] = t[1]
                 if len(t) >= 3: S[i] = t[2]
     return J, S, A
 def ids():
@@ -276,7 +277,7 @@ def main():
         n = int(sys.argv[2]) if len(sys.argv) > 2 else 8
         J, S, A = load()
         pf = os.path.join(HERE, "plan", "pending.json")
-        pend = [i for i in (json.load(open(pf)) if os.path.exists(pf) else []) if i not in J]
+        pend = [i for i in (json.load(open(pf)) if os.path.exists(pf) else []) if i not in J and i not in DROPPED]
         busy = set(J) | set(pend)
         cv = [i for i in range(3000, 3000 + len(G)) if i not in busy and (i - 2000) in S]
         cv += [i for i in range(4000, 4000 + len(S_)) if i not in busy and (i - 2000) in A and (i - 2000) in S]
