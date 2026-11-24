@@ -1,0 +1,35 @@
+# Turns the generation results into small web clips (media/build.py) and commits them to this branch under out/.
+# Switched on 2026-11-24 with the owner's yes ("A"). It lives only on this work branch (media-build), never touches main,
+# and runs only when this file or ci/media.run changes, so an ordinary push of the generation log does not start it.
+name: media
+on:
+  push:
+    branches: [media-build]
+    paths: ['.github/workflows/media.yml', 'ci/media.run']
+permissions:
+  contents: write
+concurrency: media
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Small web clips
+        id: build
+        continue-on-error: true
+        run: python3 media/build.py out --jobs 4
+      - name: Commit the clips
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add out/vid out/done.json
+          git diff --cached --quiet || (git commit -qm "Media: small web clips" && git pull -q --rebase origin media-build && git push -q origin HEAD:media-build)
+          ls out/vid/g | wc -l; ls out/vid/s | wc -l; du -sh out/vid
+      - name: Fail when a clip could not be made
+        if: steps.build.outcome == 'failure'
+        run: exit 1
