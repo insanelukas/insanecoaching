@@ -271,7 +271,7 @@ def main():
         J, S, A = load()
         cv = [i for i in range(3000, 3000 + len(G)) if i not in J and (i - 2000) in S]
         cv += [i for i in range(4000, 4000 + len(S_)) if i not in J and (i - 2000) in A and (i - 2000) in S]
-        ci = [i for i in range(2000, 2000 + len(S_)) if i not in J and request(i, J)]
+        ci = [i for i in range(1000, 1000 + len(G)) if i not in J] + [i for i in range(2000, 2000 + len(S_)) if i not in J and request(i, J)]
         tv = cv[:n]; ti = ci[:max(0, n - len(tv))]
         write("next_vid", tv, J); write("next_img", ti, J)
         print(json.dumps(dict(vid=tv, img=ti, left=dict(vid=len(cv) - len(tv), img=len(ci) - len(ti)))))
